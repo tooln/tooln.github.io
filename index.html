@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hack the Box</title>
+<style>
+  body {
+    background-color: #87CEEB; /* Sky Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #mouse {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #d4af37; /* Gold */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #cat {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #A0522D; /* Sienna */
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+  }
+  #box {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: #fff;
+    border: 2px solid #000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: openBox 0.5s ease forwards;
+  }
+
+  @keyframes openBox {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    25% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    75% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .links li {
+    margin-bottom: 5px;
+  }
+  .links li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Disable pointer events on the links */
+  }
+  .links li a:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+</head>
+<body>
+
+<div id="mouse"></div>
+<div id="cat"></div>
+<div id="box">
+  <h2 id="hack-text">Hacking in Progress...</h2>
+  <ul class="links" style="display:none;">
+    <li><a href="https://tooln.github.io/32154654subrecon665653143364321654" target="_blank" draggable="true">SubRecon</a></li>
+    <li><a href="https://tooln.github.io/3656asd21redirect6546a4sdf546" target="_blank" draggable="true">Redirect</a></li>
+    <li><a href="https://tooln.github.io/321sa3df1link3565sdf" target="_blank" draggable="true">Link Generate</a></li>
+    <li><a href="https://tooln.github.io/asdf534a36546546search31253as54df65sadf" target="_blank" draggable="true">OpenBugBounty</a></li>
+  </ul>
+</div>
+
+<script>
+  var mouse = document.getElementById("mouse");
+  var cat = document.getElementById("cat");
+  var box = document.getElementById("box");
+  var hackText = document.getElementById("hack-text");
+  var links = document.querySelector(".links");
+
+  mouse.addEventListener("mousedown", function(event) {
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+
+  function onMouseMove(event) {
+    mouse.style.left = event.clientX - 25 + "px";
+    mouse.style.top = event.clientY - 25 + "px";
+  }
+
+  function onMouseUp(event) {
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseUp);
+
+    var catRect = cat.getBoundingClientRect();
+    var mouseRect = mouse.getBoundingClientRect();
+
+    if (
+      mouseRect.left < catRect.right &&
+      mouseRect.right > catRect.left &&
+      mouseRect.top < catRect.bottom &&
+      mouseRect.bottom > catRect.top
+    ) {
+      openBox();
+    }
+  }
+
+  function openBox() {
+    box.style.display = "block";
+    hackText.style.display = "block";
+    setTimeout(function() {
+      hackText.style.display = "none";
+      links.style.display = "block";
+      // Enable pointer events on links after a delay to allow dragging
+      setTimeout(function() {
+        var linksArray = document.querySelectorAll('.links li a');
+        linksArray.forEach(function(link) {
+          link.style.pointerEvents = 'auto';
+        });
+      }, 100);
+    }, 2000); // Hacking animation duration
+  }
+</script>
+
+</body>
+</html>
