@@ -120,3 +120,12 @@ discord:
     discord_webhook_url: "https://discord.com/api/webhooks/1332847524540710973/LPhZBhzPCCaOAwt7HqhWNImwUdkqxoluGlmA_pYQVEKx4oSg7VdCr3FYooobHTN-ehRC"
 
 ```
+
+
+## Gnom Shell Extension:
+```
+sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extensions
+sudo apt install gnome-shell-extension-prefs
+sudo apt install gnome-extensions-app
+```
