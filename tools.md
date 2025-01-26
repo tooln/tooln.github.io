@@ -95,31 +95,31 @@ discord:
     discord_channel: "nuclearone"
     discord_username: "bot"
     discord_format: "{{data}}"
-    discord_webhook_url: "https://discord.com/api/webhooks/1332847031571583068/YWZYExlSukzKrtXnntEDjPORlzP8SYDNUpcqDhqDzY-eP6X1mLT2_1UcjoMbP4RWdJDi"
+    discord_webhook_url: "https://discord.com/api/webhooks/1333195545862344735/_84krXusoNfgjIJmezc33Yu5r2xrtuJBcyDXhbYQvXv5KY2J0YciJXYLaQ5I46KVSPSG"
 
   - id: "subspider"
     discord_channel: "subspider"
     discord_username: "bot"
     discord_format: "{{data}}"
-    discord_webhook_url: "https://discord.com/api/webhooks/1332847118892924939/46ZlMMQssOYAyZsWS_SZ-pQ24wsgJZyfjtWjp3LKgaKmN-qOxM9DvDahUXoTLixVNcHV"
+    discord_webhook_url: "https://discord.com/api/webhooks/1333195909932253184/4ErXHY17OV5otYroscq2tQPTMDNf0aHNotAOd4kBySswfIjm3bxrn56q8Qx-u60rYf7m"
 
   - id: "httput"
     discord_channel: "httput"
     discord_username: "bot"
     discord_format: "{{data}}"
-    discord_webhook_url: "https://discord.com/api/webhooks/1332847219438518424/5lpf07KTFCvhbM3DbmC5qMdtTi8RH3wAx0CXTxtAouaW1JP09Ra4NcSx7dns-WuogpGw"
+    discord_webhook_url: "https://discord.com/api/webhooks/1333196094170992720/5cjam27WB-FggJ2wawbqsDJgUgl53wMgluSX9upxFY-ppd0gNMiHvFc7l0_lNN7mUQqv"
 
   - id: "templates"
     discord_channel: "templates"
     discord_username: "bot"
     discord_format: "{{data}}"
-    discord_webhook_url: "https://discord.com/api/webhooks/1332847332802428969/h-ePZOVeW8nc1HsOuxEUZ_UzKLkGO6054BQ5Pqqq3XDXIC4zlnp7tAneiwaq2gRNENgq"
+    discord_webhook_url: "https://discord.com/api/webhooks/1333196462460506112/DV-88KmOhUkN6I4wROBMCqNuOOO6SJcXoSj9Z81miAkDkG7SVPYDgx6vVe8va0EhjZf_"
 
   - id: "notes"
     discord_channel: "notes"
     discord_username: "bot"
     discord_format: "{{data}}"
-    discord_webhook_url: "https://discord.com/api/webhooks/1332847524540710973/LPhZBhzPCCaOAwt7HqhWNImwUdkqxoluGlmA_pYQVEKx4oSg7VdCr3FYooobHTN-ehRC"
+    discord_webhook_url: "https://discord.com/api/webhooks/1333196544094113813/bHsCFe0XmU5fRWYOMDuxeWIuRMAVL811x_p5cSEvhGDcy1v4aJdgFGk25_KkYFZq9x1n"
 
 ```
 
