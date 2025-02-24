@@ -25,5 +25,5 @@ grep -B 40 "domain.com" output/allLinks.txt | grep "^Link:"
 
 ## Test to check any subdomain is dead or alive:
 ```
-source script/requirements.sh && clear && python3 script/crawl_subdomain.py -o test_output.txt --sub "$subdomain"
+source script/requirements.sh && clear && python3 script/crawl_subdomain.py --sub "$subdomain" -o test_output.txt
 ```
