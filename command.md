@@ -22,3 +22,8 @@ cat socialMediaLinks.txt | grep -v "linkedin.com/sharing/" | grep -v "facebook.c
 ```
 grep -B 40 "domain.com" output/allLinks.txt | grep "^Link:"
 ```
+
+## Test to check any subdomain is dead or alive:
+```
+source script/requirements.sh && clear && python3 script/crawl_subdomain.py -o test_output.txt --sub "$subdomain"
+```
