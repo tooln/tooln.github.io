@@ -27,3 +27,7 @@ grep -B 40 "domain.com" output/allLinks.txt | grep "^Link:"
 ```
 source script/requirements.sh && clear && python3 script/crawl_subdomain.py --sub "$subdomain" -o test_output.txt
 ```
+
+## Check Domain Availability on GoDaddy:
+
+[https://www.onlydomains.com/domain/frontSearch?domain=ozonpartners.cn](https://www.onlydomains.com/domain/frontSearch?domain=ozonpartners.cn)
