@@ -52,6 +52,6 @@ The tool generates output in specific directories. To review the results, naviga
 
 ## Check Domain Availability:
 
-**GoDaddy:** [https://www.godaddy.com/en](https://www.godaddy.com/en)
-**OnlyDomains:** [https://www.onlydomains.com/#](https://www.onlydomains.com/#)
-**Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
+- **GoDaddy:** [https://www.godaddy.com/en](https://www.godaddy.com/en)
+- **OnlyDomains:** [https://www.onlydomains.com/#](https://www.onlydomains.com/#)
+- **Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
