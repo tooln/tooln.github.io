@@ -1,33 +1,57 @@
-## RUN the Script:
-```
+# WEBSpider - Bug Bounty Tools
+
+WEBSpider is a powerful set of command-line tools designed to assist security researchers and bug bounty hunters. It automates the process of subdomain enumeration, crawling, and vulnerability discovery. By analyzing websites and web applications, it helps identify potential security flaws, including misconfigurations and common vulnerabilities.
+
+## Usage
+
+### Starting the Tool
+To start the tool and begin crawling and enumerating subdomains, run the following command:
+```bash
 ./run.sh
 ```
 
-## Resume the script:
-```
-source script/requirements.sh && clear && ./script/resume.sh
-```
-
-## Skip all Process and Get Output:
-```
-source script/requirements.sh && clear && ./script/skip_all_process_and_get_result.sh
+### Resuming from Where You Left Off
+If you wish to resume the process from where it was last interrupted, simply execute:
+```bash
+./resume.sh
 ```
 
-## View all valid social media links:
-```
-cat socialMediaLinks.txt | grep -v "linkedin.com/sharing/" | grep -v "facebook.com/sharer/" | grep -v "twitter.com/intent/" | grep -v "linkedin.com/shareArticle?"
-```
-
-## Find out the origin of any domain or social media link:
-```
-grep -B 40 "domain.com" output/allLinks.txt | grep "^Link:"
+### Skipping Remaining Subdomains
+If you'd like to skip the remaining subdomains and start processing the results based on previously crawled data, use:
+```bash
+./skip.sh
 ```
 
-## Test to check any subdomain is dead or alive:
-```
-source script/requirements.sh && clear && python3 script/crawl_subdomain.py --sub "$subdomain" -o test_output.txt
-```
+## Output
 
-## Check Domain Availability on GoDaddy:
+The tool generates output in specific directories. To review the results, navigate to each directory and print the vulnerabilities.
 
-[https://www.onlydomains.com/domain/frontSearch?domain=ozonpartners.cn](https://www.onlydomains.com/domain/frontSearch?domain=ozonpartners.cn)
+1. **Purchasable Email Finder: Emails Directory**:
+   To print all discovered email address vulnerabilities:
+   ```bash
+   ../Scripts/print.sh
+   ```
+
+2. **CSPAnalyzer: CSPHeaders Directory**:
+   To print all identified Content Security Policy vulnerabilities:
+   ```bash
+   ../Scripts/print.sh
+   ```
+
+3. **Unregistered Domain: Links Directory**:
+   To print all unregistered or vulnerable links found:
+   ```bash
+   ../Scripts/print.sh
+   ```
+
+4. **Find Social Media Link: Scripts Directory**:
+   To find and print social media source URLs associated with the target:
+   ```bash
+   ./find_social_media_link.sh
+   ```
+
+## Check Domain Availability:
+
+**GoDaddy:** [https://www.godaddy.com/en](https://www.godaddy.com/en)
+**OnlyDomains:** [https://www.onlydomains.com/#](https://www.onlydomains.com/#)
+**Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
