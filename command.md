@@ -29,19 +29,19 @@ The tool generates output in specific directories. To review the results, naviga
 1. **Purchasable Email Finder: Emails Directory**:
    To print all discovered email address vulnerabilities:
    ```bash
-   ../Scripts/print.sh
+   ../Scripts/print_Email.sh
    ```
 
 2. **CSPAnalyzer: CSPHeaders Directory**:
    To print all identified Content Security Policy vulnerabilities:
    ```bash
-   ../Scripts/print.sh
+   ../Scripts/print_CSP.sh
    ```
 
 3. **Unregistered Domain: Links Directory**:
    To print all unregistered or vulnerable links found:
    ```bash
-   ../Scripts/print.sh
+   ../Scripts/print_Link.sh
    ```
 
 4. **Find Social Media Link: Scripts Directory**:
