@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HackSphere</title>
+<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/3/34/Icon_hacker.png">
+<style>
+  body {
+    background: radial-gradient(circle, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Particle Background Animation */
+  #particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    animation: float 5s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(20px);
+    }
+  }
+
+  #mouse {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+    animation: glow 1.5s infinite alternate;
+    z-index: 2;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+    }
+    100% {
+      box-shadow: 0 0 25px #00ff00, 0 0 50px #00ff00;
+    }
+  }
+
+  #cat {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff0044;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 20px #ff0044, 0 0 40px #ff0044;
+    animation: pulse 2s infinite alternate;
+    z-index: 2;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  #box {
+    display: none;
+    position: absolute;
+    width: 400px;
+    max-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ff00;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  #hack-text {
+    font-size: 24px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ff00;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #00ff00;
+    }
+  }
+
+  .links-container {
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3s; /* Delay to match typing animation */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .links li {
+    margin-bottom: 10px;
+  }
+
+  .links li a {
+    text-decoration: none;
+    color: #00ff00;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: none;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .links li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .links li a:hover {
+    background-color: #00ff00;
+    color: #000;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+
+  .links li a:hover::before {
+    left: 100%;
+  }
+
+  /* Scrollbar Styling */
+  .links-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .links-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+
+  .links-container::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00ff00;
+  }
+</style>
+</head>
+<body>
+
+<!-- Particle Background -->
+<div id="particles"></div>
+
+<div id="mouse"></div>
+<div id="cat"></div>
+<div id="box">
+  <h2 id="hack-text">Initializing HackSphere...</h2>
+  <div class="links-container">
+    <ul class="links">
+      <li><a href="https://tooln.github.io/SubRecon" target="_blank" draggable="true">SubRecon</a></li>
+      <li><a href="https://tooln.github.io/Broken_link_Cheacker" target="_blank" draggable="true">BLH Tester</a></li>
+      <li><a href="https://tooln.github.io/IFRAME-Checker" target="_blank" draggable="true">IFRAME Checker</a></li>
+      <li><a href="https://tooln.github.io/LinkOpenerPro/" target="_blank" draggable="true">LinkOpenerPro</a></li>
+      <li><a href="https://tooln.github.io/OpenBugBounty_Report_Checker" target="_blank" draggable="true">Open Bug Bounty</a></li>
+      <li><a href="https://tooln.github.io/RedirectLinkTester" target="_blank" draggable="true">Redirect Link Tester</a></li>
+      <li><a href="https://tooln.github.io/XSS-Param-Changer" target="_blank" draggable="true">XSS Param Changer</a></li>
+      <li><a href="https://tooln.github.io/FFUF-CMD-GENERATOR" target="_blank" draggable="true">FFUF CMD Generator V1</a></li>
+      <li><a href="https://tooln.github.io/FFUF_Command_Generator" target="_blank" draggable="true">FFUF CMD Generator V2</a></li>
+      <li><a href="https://tooln.github.io/Extract-Links-from-Text" target="_blank" draggable="true">Extract Links from Text</a></li>
+      <li><a href="https://tooln.github.io/EmailSender" target="_blank" draggable="true">Email Sender</a></li>
+      <li><a href="https://tooln.github.io/NucleiSorter" target="_blank" draggable="true">Nuclei Sorter</a></li>
+      <li><a href="https://tooln.github.io/Nuclei-Notify" target="_blank" draggable="true">Nuclei Notify</a></li>
+      <li><a href="https://tooln.github.io/CommandFormatter" target="_blank" draggable="true">Command Generator</a></li>
+      <li><a href="https://tooln.github.io/Crawl_link_Generator" target="_blank" draggable="true">Crawl link Generator</a></li>
+      <li><a href="https://tooln.github.io/DomainHarvester" target="_blank" draggable="true">DomainHarvester</a></li>
+      <li><a href="https://tooln.github.io/UnregDomainFinder" target="_blank" draggable="true">UnregDomainFinder Output Generator</a></li>
+      <li><a href="https://tooln.github.io/NucleiCommandGenerator" target="_blank" draggable="true">Nuclei Command Generator</a></li>
+      <li><a href="https://tooln.github.io/HTTPutCommandGenerator" target="_blank" draggable="true">HTTPut Command Generator</a></li>
+      <li><a href="https://tooln.github.io/SubfinderCommandGenerator" target="_blank" draggable="true">Subfinder Command Generator</a></li>
+      <li><a href="https://tooln.github.io/Domain_Availability_Checker" target="_blank" draggable="true">Domain Availability Checker</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Particle Background
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 100; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.top = `${Math.random() * 100}%`;
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDuration = `${Math.random() * 5 + 3}s`;
+    particlesContainer.appendChild(particle);
+  }
+
+  var mouse = document.getElementById("mouse");
+  var cat = document.getElementById("cat");
+  var box = document.getElementById("box");
+  var hackText = document.getElementById("hack-text");
+  var links = document.querySelector(".links");
+
+  mouse.addEventListener("mousedown", function(event) {
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+
+  function onMouseMove(event) {
+    mouse.style.left = event.clientX - 25 + "px";
+    mouse.style.top = event.clientY - 25 + "px";
+  }
+
+  function onMouseUp(event) {
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseUp);
+
+    var catRect = cat.getBoundingClientRect();
+    var mouseRect = mouse.getBoundingClientRect();
+
+    if (
+      mouseRect.left < catRect.right &&
+      mouseRect.right > catRect.left &&
+      mouseRect.top < catRect.bottom &&
+      mouseRect.bottom > catRect.top
+    ) {
+      openBox();
+    }
+  }
+
+  function openBox() {
+    box.style.display = "block";
+    hackText.style.display = "block";
+    setTimeout(function() {
+      hackText.style.display = "none";
+      document.querySelector(".links-container").style.display = "block";
+      setTimeout(function() {
+        var linksArray = document.querySelectorAll('.links li a');
+        linksArray.forEach(function(link) {
+          link.style.pointerEvents = 'auto';
+        });
+      }, 100);
+    }, 3000); // Wait for typing animation to finish
+  }
+</script>
+</body>
+</html>
