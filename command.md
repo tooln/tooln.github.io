@@ -56,3 +56,4 @@ The tool generates output in specific directories. To review the results, naviga
 - **OnlyDomains:** [https://www.onlydomains.com/#](https://www.onlydomains.com/#)
 - **Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
 - **Check .by Belarus Domain:** [https://www.netim.com/en/domain-name/search](https://www.netim.com/en/domain-name/search)
+- **Check .br Brazilian Domain:** [https://registro.br/](https://registro.br/)
