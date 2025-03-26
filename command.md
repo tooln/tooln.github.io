@@ -57,3 +57,4 @@ The tool generates output in specific directories. To review the results, naviga
 - **Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
 - **Check .by Belarus Domain:** [https://www.netim.com/en/domain-name/search](https://www.netim.com/en/domain-name/search)
 - **Check .br Brazilian Domain:** [https://registro.br/](https://registro.br/)
+- **Check .edu Domain:** [https://net.educause.edu/search.htm](https://net.educause.edu/search.htm)
