@@ -54,7 +54,8 @@ The tool generates output in specific directories. To review the results, naviga
 
 - **GoDaddy:** [https://www.godaddy.com/en](https://www.godaddy.com/en)
 - **OnlyDomains:** [https://www.onlydomains.com/#](https://www.onlydomains.com/#)
-- **Check .ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
-- **Check .by Belarus Domain:** [https://www.netim.com/en/domain-name/search](https://www.netim.com/en/domain-name/search)
-- **Check .br Brazilian Domain:** [https://registro.br/](https://registro.br/)
-- **Check .edu Domain:** [https://net.educause.edu/search.htm](https://net.educause.edu/search.htm)
+- **.ru Russian Domain:** [https://www.ps.kz/domains](https://www.ps.kz/domains)
+- **.by Belarus Domain:** [https://www.netim.com/en/domain-name/search](https://www.netim.com/en/domain-name/search)
+- **.br Brazilian Domain:** [https://registro.br/](https://registro.br/)
+- **.edu Domain:** [https://net.educause.edu/search.htm](https://net.educause.edu/search.htm)
+- **.kw Domain:** [https://www.101domain.com/domain-availability-search.htm](https://www.101domain.com/domain-availability-search.htm)
