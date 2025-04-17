@@ -29,37 +29,25 @@ The tool generates output in specific directories. To review the results, naviga
 1. **Purchasable Email Finder: `cd Emails` Directory/Folder**:
    To print all discovered email address vulnerabilities:
    ```bash
-   cd Emails
-   ```
-   ```bash
-   ../Scripts/print_Email.sh
+   cd Emails && ../Scripts/print_Email.sh
    ```
 
-3. **CSPAnalyzer: `cd CSPHeaders` Directory/Folder**:
+2. **CSPAnalyzer: `cd CSPHeaders` Directory/Folder**:
    To print all identified Content Security Policy vulnerabilities:
    ```bash
-   cd CSPHeaders
-   ```
-   ```bash
-   ../Scripts/print_CSP.sh
+   cd CSPHeaders && ../Scripts/print_CSP.sh
    ```
 
-5. **Unregistered Domain: `cd Links` Directory/Folder**:
+3. **Unregistered Domain: `cd Links` Directory/Folder**:
    To print all unregistered or vulnerable links found:
    ```bash
-   cd Links
-   ```
-   ```bash
-   ../Scripts/print_Link.sh
+   cd Links && ../Scripts/print_Link.sh
    ```
 
 7. **Find Social Media Link: `cd Scripts` Directory/Folder**:
    To find and print social media source URLs associated with the target:
    ```bash
-   cd Scripts
-   ```
-   ```bash
-   ./find_social_media_link.sh
+   cd Scripts && ./find_social_media_link.sh
    ```
 
 ## Check Domain Availability:
