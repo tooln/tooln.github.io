@@ -14,6 +14,7 @@ source ~/.bashrc
 sudo apt update
 sudo apt install curl
 sudo apt install git
+sudo apt install net-tools
 sudo apt install zsh
 chsh -s $(which zsh)
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
