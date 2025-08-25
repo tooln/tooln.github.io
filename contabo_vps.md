@@ -1,4 +1,7 @@
 ```
+ssh root@209.126.3.73
+```
+```
 apt update && apt upgrade -y && apt install -y \
 build-essential pkg-config cmake gcc g++ make \
 python3-pip python3-venv \
