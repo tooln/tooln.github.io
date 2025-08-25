@@ -1,6 +1,8 @@
 ```
 ssh root@209.126.3.73
 ```
+
+### Necessary Tools:
 ```
 apt update && apt upgrade -y && apt install -y \
 build-essential pkg-config cmake gcc g++ make \
@@ -11,6 +13,8 @@ htop iftop iotop neofetch lsof tree \
 fail2ban unattended-upgrades \
 tmux screen jq socat
 ```
+
+### Install GO and GO tools:
 ```
 wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz -O go.tar.gz && \
 rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
@@ -33,6 +37,15 @@ URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
 ```
 echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
 source /root/.profile
+```
+
+### Download GDrive Files:
+```
+python3 -m venv ~/venv
+source ~/venv/bin/activate
+pip install gdown
+gdown https://drive.google.com/uc?id=1KB6VwVKQapjLdCDzHevPWhfTsX70JSpu
+deactivate
 ```
 
 ### TMUX all Necessary Commands:
