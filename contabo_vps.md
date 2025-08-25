@@ -34,3 +34,17 @@ URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
 echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
 source /root/.profile
 ```
+
+### TMUX all Necessary Commands:
+```
+tmux new -s session1
+```
+```
+Ctrl+b d
+```
+```
+tmux attach -t session1
+```
+```
+tmux ls
+```
