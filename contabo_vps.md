@@ -39,13 +39,18 @@ echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
 source /root/.profile
 ```
 
-### Download GDrive Files:
+### Upload GDrive Files to VPS:
 ```
 python3 -m venv ~/venv
 source ~/venv/bin/activate
 pip install gdown
 gdown https://drive.google.com/uc?id=1KB6VwVKQapjLdCDzHevPWhfTsX70JSpu
 deactivate
+```
+
+### Download Files from VPS:
+```
+scp -r root@209.126.3.73:/root/MWAYMiner_VISA ~/Downloads/
 ```
 
 ### TMUX all Necessary Commands:
