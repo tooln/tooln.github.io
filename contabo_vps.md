@@ -46,6 +46,7 @@ source ~/venv/bin/activate
 pip install gdown
 gdown https://drive.google.com/uc?id=1KB6VwVKQapjLdCDzHevPWhfTsX70JSpu
 deactivate
+rm -rf myenv
 ```
 
 ### Download Files from VPS:
