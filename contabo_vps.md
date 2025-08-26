@@ -70,3 +70,6 @@ tmux attach -t session1
 ```
 tmux ls
 ```
+```
+for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
+```
