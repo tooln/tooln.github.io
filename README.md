@@ -2,11 +2,11 @@
 Hey, I will paste a large amount of text containing URLs, domains, wildcards (e.g. *.example.com), and subdomains (e.g. blog.example.com).
 
 Your task is to:
-- Extract only the **root/base domains** (e.g. example.com).
-- Ignore subdomains, wildcards, ports, paths, and query strings.
+- Extract only the **root/base domains** (e.g. example.com) from subdomains, wildcards, ports, paths, and query strings.
 - Remove duplicates — each root domain should appear only once.
 - Output the result as a **sorted list inside a single code block**, with one domain per line.
 - Do not include any explanation or extra text — only the clean list of domains inside the code block.
+- Make sure you print only root damain, no subdomain. Okay?
 
 Now wait for my input.
 ```
