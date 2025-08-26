@@ -31,7 +31,7 @@ go install -v github.com/tomnomnom/anew@latest
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 ```
 ```
-/home/rootless/.gau.toml
+nano $HOME/.gau.toml
 URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
 ```
 ```
