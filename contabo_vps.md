@@ -38,6 +38,9 @@ URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
 echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
 source /root/.profile
 ```
+```
+snap install amass
+```
 
 ### Upload GDrive Files to VPS:
 ```
