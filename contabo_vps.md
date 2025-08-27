@@ -54,7 +54,7 @@ rm -rf venv/
 
 ### Download Files from VPS:
 ```
-scp -r root@209.126.3.73:/root/MWAYMiner_VISA ~/Downloads/
+scp -r root@209.126.3.73:/root/WAYMiner/miner3.zip ~/Downloads/
 ```
 
 ### TMUX all Necessary Commands:
