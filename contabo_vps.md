@@ -54,7 +54,10 @@ rm -rf venv/
 
 ### Download Files from VPS:
 ```
-scp -r root@209.126.3.73:/root/WAYMiner/miner3.zip ~/Downloads/
+scp -r root@209.126.3.73:/root/WAYMiner/Miner3.zip ~/Downloads/VPS/
+```
+```
+zip -r Miner3.zip Miner3/
 ```
 
 ### TMUX all Necessary Commands:
