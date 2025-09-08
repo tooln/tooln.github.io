@@ -71,3 +71,6 @@ awk '
 ```
 mv allFiles_normalized.txt allFiles.txt
 ```
+```
+cat socialMediaLinks.txt | grep -vE "tumblr.com|web.archive.org|SOURCE URL:|pinterest.com/pin/|reddit.com|linkedin.com/learning/|youtube.com/channel/|youtube.com/v/|vimeo.com|timeslive.co.za|.alibaba.com|tinyurl.com|linkedin.com/jobs/|medium.com/tag/|linkedin.com/feed/|/events/|/help/|/groups/|/hubs/|bandcamp.com|bit.ly|/pages/|/explore/|/advice/|/products/" > tmp.txt && mv tmp.txt socialMediaLinks.txt
+```
