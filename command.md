@@ -60,3 +60,14 @@ The tool generates output in specific directories. To review the results, naviga
 - **.edu:** [https://net.educause.edu/search.htm](https://net.educause.edu/search.htm)
 - **.kw:** [https://www.101domain.com/domain-availability-search.htm](https://www.101domain.com/domain-availability-search.htm)
 - **.com.kh:** [https://www.nominate.com/index.shtml](https://www.nominate.com/index.shtml)
+
+
+```
+awk '
+/^[[:space:]]*SOURCE URL:/ {src=$0; next}
+/^[[:space:]]*External Link:/ && src != "" {print src "\n" $0 "\n"}
+' allFiles.txt > allFiles_normalized.txt
+```
+```
+mv allFiles_normalized.txt allFiles.txt
+```
