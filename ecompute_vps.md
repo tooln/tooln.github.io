@@ -7,7 +7,7 @@ ssh root@45.80.148.98
 apt update && apt upgrade -y && apt install -y \
 build-essential pkg-config cmake gcc g++ make \
 python3-pip python3-venv \
-unzip zip tar xz-utils p7zip-full \
+unzip zip git tar xz-utils p7zip-full \
 net-tools dnsutils iputils-ping traceroute whois nmap \
 htop iftop iotop neofetch lsof tree \
 fail2ban unattended-upgrades \
