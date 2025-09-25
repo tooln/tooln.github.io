@@ -62,17 +62,8 @@ zip -r Miner3.zip Miner3/
 
 ### TMUX all Necessary Commands:
 ```
-tmux new -s session1
-```
-```
-Ctrl+b d
-```
-```
-tmux attach -t session1
-```
-```
-tmux ls
-```
-```
 for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
+```
+```
+for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
