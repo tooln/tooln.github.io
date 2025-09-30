@@ -33,7 +33,7 @@ go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 ```
 ```
 nano $HOME/.gau.toml
-URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
+URLScan API Key: 01999b97-d6b3-7416-bc27-542e7f3a573d
 ```
 ```
 echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
