@@ -56,10 +56,10 @@ rm -rf venv/
 
 ### Download Files from VPS:
 ```
-scp -r root@45.80.148.98:/root/Miner.zip ~/Downloads/VPS/
+scp -r root@45.80.148.98:/root/MWEBSpider_output.zip ~/Downloads/VPS/
 ```
 ```
-zip -r Miner3.zip Miner3/
+zip -r MWEBSpider_output.zip MWEBSpider/
 ```
 
 ### TMUX all Necessary Commands:
