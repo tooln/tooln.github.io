@@ -1,7 +1,9 @@
 ```
 ssh root@45.80.148.98
 ```
-
+```
+ssh root@45.80.148.155
+```
 ### Necessary Tools:
 ```
 apt update && apt upgrade -y && apt install -y \
