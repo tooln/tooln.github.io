@@ -85,3 +85,7 @@ for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
+```
+echo 'set -g mouse on' >> ~/.tmux.conf
+tmux source-file ~/.tmux.conf
+```
