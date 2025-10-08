@@ -60,19 +60,14 @@ source /root/.profile
 snap install amass
 ```
 
-### Upload GDrive Files to VPS:
+### Upload Entine Folder to VPS:
 ```
-python3 -m venv ~/venv
-source ~/venv/bin/activate
-pip install gdown
-gdown https://drive.google.com/uc?id=1KB6VwVKQapjLdCDzHevPWhfTsX70JSpu
-deactivate
-rm -rf venv/
+scp -r ~/tools root@45.80.148.192:/root/
 ```
 
 ### Download Files from VPS:
 ```
-scp -r root@45.80.148.98:/root/MWEBSpider_output.zip ~/Downloads/VPS/
+scp -r root@45.80.148.192:/root/MWEBSpider_output.zip ~/Downloads/VPS/
 ```
 ```
 zip -r MWEBSpider_output.zip MWEBSpider/
