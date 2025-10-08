@@ -2,7 +2,7 @@
 ssh root@45.80.148.192
 ```
 ```
-ssh root@45.80.148.155
+ssh root@45.80.148.193
 ```
 ### Necessary Tools:
 ```
