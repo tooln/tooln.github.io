@@ -1,5 +1,5 @@
 ```
-ssh root@45.80.148.98
+ssh root@45.80.148.192
 ```
 ```
 ssh root@45.80.148.155
@@ -18,7 +18,7 @@ tmux screen jq socat
 
 ### Install GO and GO tools:
 ```
-wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz -O go.tar.gz && \
+wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
 rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
 echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc && source ~/.bashrc && \
 go version
