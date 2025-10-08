@@ -16,13 +16,27 @@ fail2ban unattended-upgrades \
 tmux screen jq socat
 ```
 
-### Install GO and GO tools:
+### Install GO:
 ```
 wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
 rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
-echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc && source ~/.bashrc && \
 go version
 ```
+```
+cat <<'EOF' >> ~/.zshrc
+
+# >>> Go environment setup >>>
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# <<< Go environment setup <<<
+EOF
+```
+```
+source ~/.zshrc
+```
+
+### Install GO tools:
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
