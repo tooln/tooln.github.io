@@ -64,6 +64,9 @@ snap install amass
 ```
 scp -r ~/tools root@45.80.148.192:/root/
 ```
+```
+scp -r NTV10_ALL.zip root@45.80.148.193:/root/
+```
 
 ### Download Files from VPS:
 ```
