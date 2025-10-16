@@ -62,6 +62,16 @@ source /root/.profile
 ```
 snap install amass
 ```
+```
+sudo apt remove snapd
+sudo apt update
+sudo apt install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+snap version
+sudo apt update && sudo apt upgrade snapd snap
+sudo snap install amass
+```
 
 ### Upload Entine Folder to VPS:
 ```
