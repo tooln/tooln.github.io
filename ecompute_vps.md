@@ -1,10 +1,15 @@
 ```
+October 08
 ssh root@45.80.148.192
 ```
 ```
+Got Abuse Notice
+October 08
 ssh root@45.80.148.193
 ```
 ```
+Got Abuse Notice
+October 16
 ssh root@45.80.148.209
 ```
 ### Necessary Tools:
