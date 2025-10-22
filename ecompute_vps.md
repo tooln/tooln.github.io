@@ -19,7 +19,7 @@ SSH    : ssh root@45.80.148.192
 ```
 ```
 Email  : shoponalombd329@gmail.com
-Date   : Oct 23
+From   : Oct 23
 SSH    : ssh root@185.244.129.19
 ```
 ### Necessary Tools:
