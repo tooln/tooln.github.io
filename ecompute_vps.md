@@ -20,12 +20,12 @@ SSH    : ssh root@45.80.148.209
 ```
 Email  : shoponalombd329@gmail.com
 From   : Oct 23
-SSH    : ssh root@185.244.129.27
+SSH    : ssh root@185.244.129.19
 ```
 ```
 Email  : gcbd.329@gmail.com
 From   : Oct 24
-SSH    : ssh root@185.244.129.XS
+SSH    : ssh root@185.244.129.27
 ```
 ### Necessary Tools:
 ```
