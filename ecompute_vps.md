@@ -6,16 +6,18 @@ To     : Oct 20
 SSH    : ssh root@45.80.148.192
 ```
 ```
+Status : BANNED
+Email  : bughuntar1@gmail.com
+Wrn    : Got Abuse Notice - Oct 17
+From   : Oct 16
+To     : Oct 24
+SSH    : ssh root@45.80.148.209
+```
+```
 Email  : bughuntar2@gmail.com
 Wrn    : Got Abuse Notice - Oct 18
 From   : Oct 08
 SSH    : ssh root@45.80.148.193
-```
-```
-Email  : bughuntar1@gmail.com
-Wrn    : Got Abuse Notice - Oct 17
-From   : Oct 16
-SSH    : ssh root@45.80.148.209
 ```
 ```
 Email  : shoponalombd329@gmail.com
