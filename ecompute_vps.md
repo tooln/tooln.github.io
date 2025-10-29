@@ -1,19 +1,4 @@
 ```
-Status : BANNED
-Email  : bughuntar3@gmail.com
-From   : Oct 08
-To     : Oct 20
-SSH    : ssh root@45.80.148.192
-```
-```
-Status : BANNED
-Email  : bughuntar1@gmail.com
-Wrn    : Got Abuse Notice - Oct 17
-From   : Oct 16
-To     : Oct 24
-SSH    : ssh root@45.80.148.209
-```
-```
 Email  : bughuntar2@gmail.com
 Wrn    : Got Abuse Notice - Oct 18
 From   : Oct 08
@@ -29,6 +14,12 @@ Email  : gcbd.329@gmail.com
 From   : Oct 24
 SSH    : ssh root@185.244.129.27
 ```
+```
+Email  : aabbccshopon@gmail.com
+From   : Oct 29
+SSH    : ssh root@185.244.129.7
+```
+
 ### Necessary Tools:
 ```
 apt update && apt upgrade -y && apt install -y \
