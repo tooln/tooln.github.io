@@ -1,18 +1,18 @@
 ```
-Email  : bughuntar2@gmail.com
+Email  : bughuntar2@gmail.com (Banned)
 Wrn    : Got Abuse Notice - Oct 18
 From   : Oct 08
 Banned : Nov 09
 SSH    : ssh root@45.80.148.193
 ```
 ```
-Email  : shoponalombd329@gmail.com
+Email  : shoponalombd329@gmail.com (Banned)
 From   : Oct 23
 Banned : Nov 08
 SSH    : ssh root@185.244.129.19
 ```
 ```
-Email  : aabbccshopon@gmail.com
+Email  : aabbccshopon@gmail.com (Banned)
 From   : Oct 29
 Banned : Nov 03
 SSH    : ssh root@185.244.129.7
