@@ -22,6 +22,11 @@ Email  : gcbd.329@gmail.com
 From   : Oct 24
 SSH    : ssh root@185.244.129.27
 ```
+```
+Email  : sahidulalamindiarupe@gmail.com
+From   : Nov 10
+SSH    : ssh root@
+```
 
 ### Necessary Tools:
 ```
