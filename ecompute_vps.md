@@ -42,7 +42,8 @@ unzip zip git tar xz-utils p7zip-full \
 net-tools dnsutils iputils-ping traceroute whois nmap \
 htop iftop iotop neofetch lsof tree \
 fail2ban unattended-upgrades \
-tmux screen jq socat
+tmux screen jq socat \
+sudo apt install moreutils
 ```
 
 ### Install GO:
