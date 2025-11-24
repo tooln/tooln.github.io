@@ -25,7 +25,7 @@ SSH    : ssh root@185.244.129.27
 ```
 Email  : sahidulalamindiarupe@gmail.com
 From   : Nov 10
-SSH    : ssh root@185.244.129.104
+SSH    : ssh root@185.244.129.104 (E17)
 ```
 ```
 Email  : sagorsx1@gmail.com
