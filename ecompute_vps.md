@@ -30,7 +30,7 @@ SSH    : ssh root@185.244.129.104 (E17)
 ```
 Email  : sagorsx1@gmail.com
 From   : Nov 10
-SSH    : ssh root@185.244.129.121
+SSH    : ssh root@185.244.129.121 (E29)
 ```
 
 ### Necessary Tools:
