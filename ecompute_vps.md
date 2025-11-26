@@ -18,7 +18,7 @@ Banned : Nov 03
 SSH    : ssh root@185.244.129.7
 ```
 ```
-Email  : gcbd.329@gmail.com
+Email  : pubgduo20192019@gmail.com
 From   : Oct 24
 SSH    : ssh root@185.244.129.27 (E29)
 ```
