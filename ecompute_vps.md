@@ -8,7 +8,7 @@ net-tools dnsutils iputils-ping traceroute whois nmap \
 htop iftop iotop neofetch lsof tree \
 fail2ban unattended-upgrades \
 tmux screen jq socat \
-sudo apt install moreutils
+sudo apt install moreutils -y
 ```
 
 ### Install GO:
