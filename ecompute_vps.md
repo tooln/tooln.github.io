@@ -46,9 +46,6 @@ source /root/.profile
 ```
 snap install amass
 ```
-```
-CGO_ENABLED=0 go install -v github.com/owasp-amass/amass/v5/cmd/amass@main
-```
 
 ### Upload Entine Folder to VPS:
 ```
