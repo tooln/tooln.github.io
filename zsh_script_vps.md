@@ -72,3 +72,6 @@ exec zsh
 ```
 chsh -s $(which zsh)
 ```
+```
+nnny 223 1111 n1y
+```
