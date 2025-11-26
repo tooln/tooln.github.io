@@ -1,15 +1,6 @@
 ### Necessary Tools:
 ```
-apt update && apt upgrade -y && apt install -y \
-build-essential pkg-config cmake gcc g++ make \
-python3-pip python3-venv \
-unzip zip git tar xz-utils p7zip-full \
-net-tools dnsutils iputils-ping traceroute whois nmap \
-htop iftop iotop neofetch lsof tree \
-fail2ban unattended-upgrades \
-tmux screen jq socat \
-sudo apt install moreutils -y \
-sudo apt install zip -y
+apt update && apt upgrade -y && apt install -y build-essential pkg-config cmake gcc g++ make python3-pip python3-venv unzip zip git tar xz-utils p7zip-full net-tools dnsutils iputils-ping traceroute whois nmap htop iftop iotop neofetch lsof tree fail2ban unattended-upgrades tmux screen jq socat moreutils
 ```
 
 ### Install GO:
