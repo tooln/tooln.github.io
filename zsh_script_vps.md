@@ -1,4 +1,7 @@
 ```
+nano script.sh && chmod +x script.sh && ./script.sh
+```
+```
 set -euo pipefail
 
 # 1) Ensure basics
