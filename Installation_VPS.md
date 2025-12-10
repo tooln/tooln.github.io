@@ -74,3 +74,8 @@ for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 ```
+
+### Remove SMTP related templates from Nuclei Templates
+```
+grep -R -l -i -E "smtp|ehlo|helo|mail from|rcpt to|port 25" . | xargs rm -f
+```
