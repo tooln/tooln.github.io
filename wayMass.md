@@ -53,6 +53,10 @@ rm alive_hosts.txt alive_hosts_clean.txt hosts.txt allLinks.txt hosts_clean.txt
 
 ## Chunked HTTPx Scanner
 ```
+nano script.sh && chmod +x script.sh
+```
+
+```
 #!/bin/bash
 
 INPUT_FILE="allAliveLinks.txt"
