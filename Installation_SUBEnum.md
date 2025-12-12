@@ -28,7 +28,7 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 #### Sublist3r
 ```
-sudo apt install sublist3r
+sudo apt install sublist3r -y
 ```
 
 #### Amass
