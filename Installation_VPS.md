@@ -89,16 +89,19 @@ for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./Database/spider$i.txt; 
 cd Database/
 cat spider* | sort -u > SocialMediaLinks.txt
 rm spider*
+cd ../
 
 for i in {1..9}; do cp ./Spider$i/Links/domains.txt ./Database/spider$i.txt; done
 cd Database/
 cat spider* | sort -u > allDomain_Links.txt
 rm spider*
+cd ../
 
 for i in {1..9}; do cp ./Spider$i/CSPHeaders/domains.txt ./Database/spider$i.txt; done
 cd Database/
 cat spider* | sort -u > allDomain_CSP.txt
 rm spider*
+cd ../
 
 for i in {1..9}; do cp ./Spider$i/Emails/domains.txt ./Database/spider$i.txt; done
 cd Database/
