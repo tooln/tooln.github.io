@@ -66,6 +66,17 @@ zip -r MWEBSpider_output.zip MWEBSpider/
 
 ### TMUX all Necessary Commands:
 ```
+echo 'set -g mouse on' >> ~/.tmux.conf
+tmux source-file ~/.tmux.conf
+```
+
+### Remove SMTP related templates from Nuclei Templates
+```
+grep -R -l -i -E "smtp|ehlo|helo|mail from|rcpt to|port 25" . | xargs rm -f
+```
+
+### WEBSpider Commands:
+```
 for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 ```
@@ -76,13 +87,4 @@ mkdir -p SocialMediaLinks/
 for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./SocialMediaLinks/spider$i.txt; done
 cd SocialMediaLinks/
 cat *.txt | sort -u > SocialMediaLinks.txt
-```
-```
-echo 'set -g mouse on' >> ~/.tmux.conf
-tmux source-file ~/.tmux.conf
-```
-
-### Remove SMTP related templates from Nuclei Templates
-```
-grep -R -l -i -E "smtp|ehlo|helo|mail from|rcpt to|port 25" . | xargs rm -f
 ```
