@@ -83,8 +83,25 @@ for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 ```
-mkdir -p SocialMediaLinks/
-for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./SocialMediaLinks/spider$i.txt; done
-cd SocialMediaLinks/
-cat *.txt | sort -u > SocialMediaLinks.txt
+mkdir -p Database/
+
+for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./Database/spider$i.txt; done
+cd Database/
+cat spider* | sort -u > SocialMediaLinks.txt
+rm spider*
+
+for i in {1..9}; do cp ./Spider$i/Links/domains.txt ./Database/spider$i.txt; done
+cd Database/
+cat spider* | sort -u > allDomain_Links.txt
+rm spider*
+
+for i in {1..9}; do cp ./Spider$i/CSPHeaders/domains.txt ./Database/spider$i.txt; done
+cd Database/
+cat spider* | sort -u > allDomain_CSP.txt
+rm spider*
+
+for i in {1..9}; do cp ./Spider$i/Emails/domains.txt ./Database/spider$i.txt; done
+cd Database/
+cat spider* | sort -u > allDomain_Emails.txt
+rm spider*
 ```
