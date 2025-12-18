@@ -72,7 +72,7 @@ for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 ```
-mkdir SocialMediaLinks/
+mkdir -p SocialMediaLinks/
 for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./SocialMediaLinks/spider$i.txt; done
 cd SocialMediaLinks/
 cat *.txt | sort -u > SocialMediaLinks.txt
