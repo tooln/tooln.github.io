@@ -74,6 +74,9 @@ go install -v github.com/PentestPad/subzy@latest
 
 ### TMUX all Necessary Commands:
 ```
+tmux new -t tmp
+```
+```
 echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 ```
