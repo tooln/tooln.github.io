@@ -57,21 +57,14 @@ source /root/.profile
 ```
 snap install amass
 ```
-
-### Upload Entine Folder to VPS:
 ```
-scp -r ~/tools root@45.80.148.192:/root/
-```
-```
-scp -r NTV10_ALL.zip root@45.80.148.193:/root/
+sudo apt install sublist3r -y
 ```
 
-### Download Files from VPS:
+### VulnScan
 ```
-scp -r root@45.80.148.192:/root/MWEBSpider_output.zip ~/Downloads/VPS/
-```
-```
-zip -r MWEBSpider_output.zip MWEBSpider/
+GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
+go install -v github.com/PentestPad/subzy@latest
 ```
 
 ### TMUX all Necessary Commands:
