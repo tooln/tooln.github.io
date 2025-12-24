@@ -1,3 +1,13 @@
+### PC Shutdown Command:
+```
+sudo apt update -qq && sudo apt upgrade -y -qq && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo rm -rf /tmp/* /var/tmp/* && sudo shutdown now
+```
+
+### VPS Reboot Command:
+```
+sudo apt update -qq && sudo apt upgrade -y -qq && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
+```
+
 ### Necessary Tools:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
