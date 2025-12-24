@@ -13,12 +13,10 @@ toilet bc \
 libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 
-### Install GO:
 ```
-wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
-rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
-go version
+nano script.sh && chmod +x script.sh && ./script.sh
 ```
+
 ```
 cat <<'EOF' >> ~/.zshrc
 
@@ -31,6 +29,13 @@ EOF
 ```
 ```
 source ~/.zshrc
+```
+
+### Install GO:
+```
+wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
+rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
+go version
 ```
 
 ### Install GO tools:
