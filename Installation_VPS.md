@@ -56,8 +56,8 @@ nano $HOME/.gau.toml
 URLScan API Key: 01999b97-d6b3-7416-bc27-542e7f3a573d
 ```
 ```
-echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> /root/.profile
-source /root/.profile
+mkdir $HOME/.config/notify/
+nano $HOME/.config/notify/provider-config.yaml
 ```
 ```
 snap install amass
