@@ -1,8 +1,3 @@
-### PC Shutdown Command:
-```
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo rm -rf /tmp/* /var/tmp/* && sudo shutdown now
-```
-
 ### VPS Reboot Command:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
@@ -126,4 +121,9 @@ for i in {1..9}; do cp ./Spider$i/Emails/domains.txt ./Database/spider$i.txt; do
 cd Database/
 cat spider* | sort -u > allDomain_Emails.txt
 rm spider*
+```
+
+### PC Shutdown Command:
+```
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo rm -rf /tmp/* /var/tmp/* && sudo shutdown now
 ```
