@@ -1,6 +1,9 @@
+### Create Bash Script:
 ```
 nano script.sh && chmod +x script.sh && ./script.sh
 ```
+
+### Script:
 ```
 set -euo pipefail
 
@@ -70,11 +73,11 @@ echo "[*] .zshrc patched. Backup at ~/.zshrc.backup"
 # 7) Apply immediately
 echo "[*] Reloading zsh..."
 exec zsh
-
-```
-```
-chsh -s $(which zsh)
 ```
 ```
 nnny 223 1111 n1y
+```
+### Must be:
+```
+chsh -s $(which zsh)
 ```
