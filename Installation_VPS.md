@@ -19,7 +19,7 @@ libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 
 ```
-nano script.sh && chmod +x script.sh && ./script.sh
+nano zsh.sh && chmod +x zsh.sh && ./zsh.sh
 ```
 
 ```
