@@ -51,6 +51,7 @@ go version
 ### Install GO tools:
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo apt install sublist3r -y
 go install github.com/tomnomnom/assetfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/tomnomnom/httprobe@latest
@@ -62,6 +63,7 @@ CGO_ENABLED=1 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 nuclei -up
 nuclei -ut
+snap install amass
 ```
 ```
 nano $HOME/.gau.toml
@@ -71,18 +73,6 @@ URLScan API Key: 01999b97-d6b3-7416-bc27-542e7f3a573dXXX
 mkdir $HOME/.config/notify/
 nano $HOME/.config/notify/provider-config.yaml
 ```
-```
-snap install amass
-```
-```
-sudo apt install sublist3r -y
-```
-
-### VulnScan
-```
-GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
-go install -v github.com/PentestPad/subzy@latest
-```
 
 ### TMUX all Necessary Commands:
 ```
@@ -91,6 +81,12 @@ tmux new -t tmp
 ```
 echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
+```
+
+### VulnScan Scripts:
+```
+GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
+go install -v github.com/PentestPad/subzy@latest
 ```
 
 ### Remove SMTP related templates from Nuclei Templates
