@@ -1,6 +1,6 @@
 ### Create Bash Script:
 ```
-nano script.sh && chmod +x script.sh && ./script.sh
+nano zsh.sh && chmod +x zsh.sh && ./zsh.sh
 ```
 
 ### Script:
