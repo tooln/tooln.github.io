@@ -62,6 +62,8 @@ snap install amass
 ```
 ```
 nano $HOME/.gau.toml
+echo 'unalias gau 2>/dev/null; alias gau=command\ gau' >> ~/.zshrc
+source ~/.zshrc
 ```
 ```
 mkdir $HOME/.config/notify/
