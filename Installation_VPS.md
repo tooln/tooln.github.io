@@ -62,7 +62,6 @@ snap install amass
 ```
 ```
 nano $HOME/.gau.toml
-URLScan API Key: 01999b97-d6b3-7416-bc27-542e7f3a573dXXX
 ```
 ```
 mkdir $HOME/.config/notify/
