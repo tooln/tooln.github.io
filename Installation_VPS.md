@@ -104,6 +104,9 @@ for d in Miner*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 ```
+for d in Intel*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
+```
+```
 mkdir -p Database/
 
 for i in {1..9}; do cp ./Spider$i/socialMediaLinks.txt ./Database/spider$i.txt; done
