@@ -137,3 +137,8 @@ rm spider*
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo rm -rf /tmp/* /var/tmp/* && sudo shutdown now
 ```
+
+### VPS Wipe Out Command:
+```
+find / -type f -exec shred -zuf {} \; 2>/dev/null && history -c && rm -rf ~/.bash_history ~/.zsh_history /tmp/* /var/tmp/* && reboot
+```
