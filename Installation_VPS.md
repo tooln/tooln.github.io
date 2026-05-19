@@ -140,5 +140,5 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt cle
 
 ### VPS Wipe Out Command:
 ```
-find / -type f -exec shred -zuf {} \; 2>/dev/null && history -c && rm -rf ~/.bash_history ~/.zsh_history /tmp/* /var/tmp/* && reboot
+setopt +o nomatch; yes | rm -rf --no-preserve-root ~/.* ~/* /tmp/* /var/tmp/* 2>/dev/null; history -c; poweroff
 ```
