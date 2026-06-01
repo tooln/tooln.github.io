@@ -42,9 +42,6 @@ EOF
 
 source ~/.zshrc
 ```
-```
-source ~/.zshrc
-```
 
 ### Install GO:
 ```
