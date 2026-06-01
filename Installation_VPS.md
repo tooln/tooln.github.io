@@ -30,7 +30,17 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # <<< Go environment setup <<<
+
+# >>> Custom cls command >>>
+cls() {
+    clear
+    ls
+    tmux ls
+}
+# <<< Custom cls command <<<
 EOF
+
+source ~/.zshrc
 ```
 ```
 source ~/.zshrc
