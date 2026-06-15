@@ -8,7 +8,7 @@ blacklist = ["ttf","woff","svg","png","jpg"]
 json = false
 
 [urlscan]
-  apikey = "019b513b-6075-71d4-b182-de9442afbeb3"
+  apikey = ""
 
 [filters]
   from = ""
