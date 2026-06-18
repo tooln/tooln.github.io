@@ -110,7 +110,7 @@ for d in Intel*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 
 ### Nuclei Output:
 ```
-cat output.txt | grep -vE "weak-cipher-suites|self-signed-ssl|untrusted-root-certificate|kubernetes-fake-certificate|expired-ssl|cloudflare-transform-via-url-injection"
+cat output.txt | grep -vE "weak-cipher-suites|self-signed-ssl|untrusted-root-certificate|kubernetes-fake-certificate|expired-ssl|cloudflare-transform-via-url-injection|tomcat-stacktraces"
 ```
 
 ### PC Shutdown Command:
