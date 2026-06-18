@@ -56,6 +56,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 sudo apt install sublist3r -y
 go install github.com/tomnomnom/assetfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install github.com/tomnomnom/httprobe@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/waybackurls@latest
