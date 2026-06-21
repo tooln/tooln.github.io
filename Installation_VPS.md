@@ -11,7 +11,7 @@ python3 python3-pip python3-venv \
 git curl wget \
 unzip zip tar xz-utils p7zip-full \
 net-tools dnsutils iputils-ping traceroute whois nmap \
-htop iftop iotop fastfetch lsof tree \
+htop iftop iotop lsof tree \
 fail2ban unattended-upgrades \
 tmux screen jq socat moreutils \
 toilet bc net-tools \
@@ -93,7 +93,7 @@ echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 ```
 
-### VulnScan Scripts:
+### OpenEYE external Tools:
 ```
 GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
 go install -v github.com/PentestPad/subzy@latest
@@ -112,11 +112,6 @@ for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ### Nuclei Output:
 ```
 cat output.txt | grep -vE "weak-cipher-suites|self-signed-ssl|untrusted-root-certificate|kubernetes-fake-certificate|expired-ssl|cloudflare-transform-via-url-injection|tomcat-stacktraces"
-```
-
-### PC Shutdown Command:
-```
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo find /tmp /var/tmp -mindepth 1 -delete && sudo systemctl poweroff -i
 ```
 
 ### VPS Wipe Out Command:
