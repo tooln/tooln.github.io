@@ -106,7 +106,7 @@ grep -R -l -i -E "smtp|ehlo|helo|mail from|rcpt to|port 25" . | xargs rm -f
 
 ### WEBIntel Commands:
 ```
-for d in Intel*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
+for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 
 ### Nuclei Output:
