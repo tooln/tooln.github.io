@@ -1,15 +1,5 @@
-## KXSS
+## Dalfox & KXSS
 ```
+sudo snap install dalfox
 go install github.com/Emoe/kxss@latest
-```
-
-## DALFOX Install
-```
-git clone https://github.com/hahwul/dalfox.git
-cd dalfox
-go install
-go build
-./dalfox -h
-sudo cp dalfox /usr/local/bin
-dalfox -h
 ```
