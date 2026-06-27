@@ -13,4 +13,3 @@ go build
 sudo cp dalfox /usr/local/bin
 dalfox -h
 ```
-```
