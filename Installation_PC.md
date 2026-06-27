@@ -17,9 +17,18 @@ libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 sudo apt install golang-go
 go version
-echo 'export GOPATH="$HOME/go"' >> ~/.bashrc
-echo 'export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"' >> ~/.bashrc
-source ~/.bashrc
+```
+```
+cat <<'EOF' >> ~/.zshrc
+
+# >>> Go environment setup >>>
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# <<< Go environment setup <<<
+EOF
+
+source ~/.zshrc
 ```
 
 ## All possible GO tools installation:
@@ -47,11 +56,6 @@ gau -h
 anew -h
 nuclei -h
 ```
-```
-/home/rootless/.gau.toml
-URLScan API Key: 5a50b58b-645b-4b06-a00d-ea419f7d293e
-```
-
 
 ## Gnom Shell Extension:
 ```
@@ -59,17 +63,6 @@ sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extensions
 sudo apt install gnome-shell-extension-prefs
 sudo apt install gnome-extensions-app
-```
-
-## DALFOX Install
-```
-git clone https://github.com/hahwul/dalfox.git
-cd dalfox
-go install
-go build
-./dalfox -h
-sudo cp dalfox /usr/local/bin
-dalfox -h
 ```
 
 ### PC Shutdown Command:
