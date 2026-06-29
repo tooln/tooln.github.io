@@ -1,3 +1,7 @@
+```
+grep "\[POC\]\[V\]" xss.txt
+```
+
 ### VPS Reboot Command:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
