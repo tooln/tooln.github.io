@@ -1,4 +1,7 @@
 ```
+zip xss_files.zip xss.txt pxss.txt purls.txt
+```
+```
 grep "\[POC\]\[V\]" xss.txt
 ```
 
