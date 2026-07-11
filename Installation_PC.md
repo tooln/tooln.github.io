@@ -48,13 +48,14 @@ nuclei -ut
 ```
 sudo apt remove python3-httpx
 ```
+
+### Waymore
 ```
-subfinder -h
-httpx -h
-subzy --help
-gau -h
-anew -h
-nuclei -h
+sudo apt update
+sudo apt install -y pipx
+pipx ensurepath
+pipx install waymore
+waymore --version
 ```
 
 ## Gnom Shell Extension:
