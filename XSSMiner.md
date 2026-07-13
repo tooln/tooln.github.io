@@ -22,6 +22,9 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 waymore --version
 ```
+```
+nano ~/.config/waymore/config.yml
+```
 
 ## X8
 ```
