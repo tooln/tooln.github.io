@@ -1,11 +1,3 @@
-### Wayback Machine
-```
-go install github.com/lc/gau/v2/cmd/gau@latest
-go install github.com/tomnomnom/waybackurls@latest
-sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
-waymore --version
-```
-
 ## SUBEnum
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
@@ -15,11 +7,21 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 ```
 
 ## SUBMiner
+
+#### Aria2c
 ```
 sudo apt install aria2
 ```
 
-### X8
+#### Wayback Machine
+```
+go install github.com/lc/gau/v2/cmd/gau@latest
+go install github.com/tomnomnom/waybackurls@latest
+sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
+waymore --version
+```
+
+## X8
 ```
 apt update
 apt install -y curl build-essential pkg-config libssl-dev
@@ -31,4 +33,9 @@ cargo --version
 ```
 cargo install x8
 x8 --version
+```
+
+## Dalfox
+```
+sudo snap install dalfox
 ```
