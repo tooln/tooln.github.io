@@ -18,6 +18,8 @@ sudo apt install aria2
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/waybackurls@latest
 sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 waymore --version
 ```
 
