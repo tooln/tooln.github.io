@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt cle
 ### Necessary Tools:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
-build-essential parallel pkg-config cmake gcc g++ make \
+ripgrep build-essential parallel pkg-config cmake gcc g++ make \
 python3 python3-pip python3-venv \
 git curl wget \
 unzip zip tar xz-utils p7zip-full \
