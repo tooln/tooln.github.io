@@ -46,6 +46,16 @@ go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/projectdiscovery/notify/cmd/notify@latest
 ```
+```
+mkdir $HOME/.config/notify/
+nano $HOME/.config/notify/provider-config.yaml
+```
+```
+sudo hostnamectl set-hostname vps12
+sudo sed -i 's/^127\.0\.1\.1.*/127.0.1.1 vps12/' /etc/hosts
+sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.cfg
+sudo reboot
+```
 
 ### TMUX Setup:
 ```
