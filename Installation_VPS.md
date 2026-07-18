@@ -84,7 +84,7 @@ sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.
 sudo reboot
 ```
 
-### TMUX all Necessary Commands:
+### TMUX Setup:
 ```
 tmux new -t tmp
 ```
