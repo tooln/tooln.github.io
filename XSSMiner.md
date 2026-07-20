@@ -43,4 +43,6 @@ x8 --version
 ## Dalfox
 ```
 sudo snap install dalfox
+go install github.com/Emoe/kxss@latest
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 ```
