@@ -1,3 +1,7 @@
+```
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+```
+
 ## SUBEnum
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
@@ -40,9 +44,8 @@ cargo install x8
 x8 --version
 ```
 
-## Dalfox
+## Dalfox & KXSS
 ```
 sudo snap install dalfox
 go install github.com/Emoe/kxss@latest
-go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 ```
