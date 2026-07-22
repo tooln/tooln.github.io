@@ -14,7 +14,7 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 #### Aria2c
 ```
-sudo apt install aria2
+sudo apt install aria2 -y
 ```
 
 #### Wayback Machine
