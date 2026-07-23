@@ -1,5 +1,12 @@
+## Basic Command:
 ```
-go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+ZIP=$(find ~ -type f -name 'x8Fuzzer*.zip' -print -quit) && cd "$(dirname "$ZIP")" && rm -rf "$(basename "$ZIP" .zip)" && unzip "$ZIP" && rm "$ZIP" && cd "$(basename "$ZIP" .zip)" && clear && ls
+```
+```
+ZIP=$(find ~ -type f -name 'xssHunter*.zip' -print -quit) && cd "$(dirname "$ZIP")" && rm -rf "$(basename "$ZIP" .zip)" && unzip "$ZIP" && rm "$ZIP" && cd "$(basename "$ZIP" .zip)" && clear && ls
+```
+```
+tmux new -s xssHunter
 ```
 
 ## SUBEnum
@@ -8,6 +15,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/tomnomnom/assetfinder@latest
 snap install amass
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 ```
 
 ## SUBMiner
