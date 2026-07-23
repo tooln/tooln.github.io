@@ -57,3 +57,32 @@ x8 --version
 sudo snap install dalfox
 go install github.com/Emoe/kxss@latest
 ```
+
+# Onliner:
+```
+snap install amass
+snap install dalfox
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install github.com/tomnomnom/assetfinder@latest
+go install github.com/Emoe/kxss@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+go install github.com/lc/gau/v2/cmd/gau@latest
+go install github.com/tomnomnom/waybackurls@latest
+sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+waymore --version
+apt update
+sudo apt install aria2 -y
+apt install -y curl build-essential pkg-config libssl-dev
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
+rustc --version
+cargo --version
+cargo install x8
+x8 --version
+```
+```
+for cmd in amass dalfox subfinder assetfinder kxss httpx notify gau waybackurls waymore aria2 rustc cargo x8; do printf "%-15s: " "$cmd"; command -v "$cmd" >/dev/null && ($cmd --version 2>/dev/null | head -n 1 || echo "installed") || echo "NOT INSTALLED"; done
+```
