@@ -84,5 +84,5 @@ cargo install x8
 x8 --version
 ```
 ```
-for cmd in amass dalfox subfinder assetfinder kxss httpx notify gau waybackurls waymore aria2 rustc cargo x8; do printf "%-15s: " "$cmd"; command -v "$cmd" >/dev/null && ($cmd --version 2>/dev/null | head -n 1 || echo "installed") || echo "NOT INSTALLED"; done
+check(){ printf "%-12s" "$1"; eval "$2" >/dev/null 2>&1 && echo "✅ INSTALLED" || echo "❌ MISSING"; }; check go "go version"; check amass "amass -version"; check dalfox "dalfox -V"; check subfinder "$HOME/go/bin/subfinder -version"; check assetfinder "$HOME/go/bin/assetfinder -h"; check httpx "$HOME/go/bin/httpx -version"; check notify "$HOME/go/bin/notify -version"; check gau "$HOME/go/bin/gau --version"; check waybackurls "$HOME/go/bin/waybackurls -h"; check waymore "waymore --version"; check aria2c "aria2c -v"; check rustc "rustc --version"; check cargo "cargo --version"; check x8 "x8 --version"
 ```
