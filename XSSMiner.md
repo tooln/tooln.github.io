@@ -1,12 +1,10 @@
 ## Basic Command:
 ```
-ZIP=$(find ~ -type f -name 'x8Fuzzer*.zip' -print -quit) && cd "$(dirname "$ZIP")" && rm -rf "$(basename "$ZIP" .zip)" && unzip "$ZIP" && rm "$ZIP" && cd "$(basename "$ZIP" .zip)" && clear && ls
-```
-```
-ZIP=$(find ~ -type f -name 'xssHunter*.zip' -print -quit) && cd "$(dirname "$ZIP")" && rm -rf "$(basename "$ZIP" .zip)" && unzip "$ZIP" && rm "$ZIP" && cd "$(basename "$ZIP" .zip)" && clear && ls
-```
-```
-tmux new -s xssHunter
+for zip in *.zip; do
+    base="${zip%.zip}"
+    unzip -p "$zip" xss.txt > "${base}_xss.txt" 2>/dev/null
+    unzip -p "$zip" pxss.txt > "${base}_pxss.txt" 2>/dev/null
+done
 ```
 
 ## SUBEnum
