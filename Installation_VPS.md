@@ -17,11 +17,15 @@ tmux screen jq socat moreutils \
 toilet bc net-tools \
 libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
-
 ```
-nano zsh.sh && chmod +x zsh.sh && ./zsh.sh
+curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/zsh.sh && chmod +x zsh.sh && ./zsh.sh
 ```
-
+```
+nnny 223 1111 n1y
+```
+```
+chsh -s $(which zsh)
+```
 ```
 cat <<'EOF' >> ~/.zshrc
 
