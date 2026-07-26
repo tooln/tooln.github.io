@@ -86,7 +86,7 @@ cargo install x8
 x8 --version
 ```
 ```
-nano $HOME/.gau.toml
+curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/.gau.toml
 echo 'unalias gau 2>/dev/null; alias gau=command\ gau' >> ~/.zshrc
 source ~/.zshrc
 ```
