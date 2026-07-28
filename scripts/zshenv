@@ -1,0 +1,9 @@
+# Cargo
+. "$HOME/.cargo/env"
+
+# Go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+
+# User binaries
+export PATH="$HOME/.local/bin:$GOROOT/bin:$GOPATH/bin:$PATH"
