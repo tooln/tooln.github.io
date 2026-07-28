@@ -24,7 +24,7 @@ sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.
 sudo reboot
 ```
 ```
-curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/zsh.sh && chmod +x zsh.sh && ./zsh.sh
+curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh && rm zsh.sh
 ```
 ```
 nnny 223 1111 n1y
@@ -51,6 +51,9 @@ cls() {
 EOF
 
 source ~/.zshrc
+```
+```
+curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
 ```
 
 ### Install GO:
