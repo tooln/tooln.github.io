@@ -2,8 +2,8 @@
 ```
 for zip in *.zip; do
     base="${zip%.zip}"
-    unzip -p "$zip" reflector_xss.txt > "${base}_xss.txt" 2>/dev/null
-    unzip -p "$zip" reflected.txt > "${base}_pxss.txt" 2>/dev/null
+    unzip -p "$zip" reflector_xss.txt > "${base}_URxss.txt" 2>/dev/null
+    unzip -p "$zip" reflected.txt > "${base}_reflected.txt" 2>/dev/null
 done
 ```
 ```
