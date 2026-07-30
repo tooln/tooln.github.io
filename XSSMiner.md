@@ -13,6 +13,13 @@ for zip in *.zip; do
     unzip -p "$zip" pxss.txt > "${base}_pxss.txt" 2>/dev/null
 done
 ```
+```
+find . -name "xssMiner.zip" -exec sh -c '
+for f; do
+    printf "%-40s %8s\n" "$(basename "$(dirname "$f")")" "$(du -h "$f" | cut -f1)"
+done
+' sh {} +
+```
 
 ## SUBEnum
 ```
