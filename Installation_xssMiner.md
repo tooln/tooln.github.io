@@ -52,9 +52,6 @@ EOF
 
 source ~/.zshrc
 ```
-```
-curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
-```
 
 ### Install GO:
 ```
@@ -87,6 +84,9 @@ rustc --version
 cargo --version
 cargo install x8
 x8 --version
+```
+```
+curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
 ```
 ```
 curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/.gau.toml
