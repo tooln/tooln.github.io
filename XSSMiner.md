@@ -1,4 +1,23 @@
-## Basic Command:
+### Big Domain:
+```
+apple.com
+apnic.net
+sas.com
+nuveen.com
+```
+
+### Configuration:
+| Miner  | Name  | Status         |
+| ------ | ----- | -------------- |
+| Miner1 | alpha | Not Configured |
+| Miner2 | beta  | Configured     |
+| Miner3 | gamma | Not Configured |
+| Miner4 | delta | Configured     |
+| Miner5 | Eps   | Configured     |
+| Miner6 | Zeta  | Configured     |
+
+
+### Unzip xssHunter result:
 ```
 for zip in *.zip; do
     base="${zip%.zip}"
@@ -13,6 +32,8 @@ for zip in *.zip; do
     unzip -p "$zip" pxss.txt > "${base}_pxss.txt" 2>/dev/null
 done
 ```
+
+### Check all xssMiner.zip File size:
 ```
 find . -name "xssMiner.zip" -exec sh -c '
 for f; do
@@ -22,7 +43,7 @@ done
 ```
 
 
-### unzip all xssMiner.zip file:
+### Unzip all downloaded SurfaceMapper xssMiner.zip file:
 ```
 find . -mindepth 1 -maxdepth 1 -type d \
   -exec sh -c '
