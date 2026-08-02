@@ -9,7 +9,7 @@ nuveen.com
 ### Configuration:
 | Miner  | Name  | Status         |
 | ------ | ----- | -------------- |
-| Miner1 | alpha | Not Configured |
+| Miner1 | alpha | Configured     |
 | Miner2 | beta  | Configured     |
 | Miner3 | gamma | Not Configured |
 | Miner4 | delta | Configured     |
