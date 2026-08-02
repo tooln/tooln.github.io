@@ -56,9 +56,9 @@ done
 
 ### Show endpoints.txt human-readable size
 ```
-developer@linux ~/Downloads/xssMiner DB New % find . -name endpoints.txt -exec du -h {} \; | sort -h
-420K	./Done payoneer.com.cn/endpoints.txt
-864K	./Done aic.sg/endpoints.txt
+developer@linux ~/Downloads/xssMiner% find . -name endpoints.txt -exec du -h {} \; | sort -h
+420K	./payoneer.com.cn/endpoints.txt
+864K	./aic.sg/endpoints.txt
 880K	./skuad.io/endpoints.txt
 888K	./visaprepaidprocessing.com/endpoints.txt
 980K	./sodastream.pl/endpoints.txt
