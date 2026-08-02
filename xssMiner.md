@@ -33,15 +33,6 @@ for zip in *.zip; do
 done
 ```
 
-### Check all xssMiner.zip File size:
-```
-find . -name "xssMiner.zip" -exec sh -c '
-for f; do
-    printf "%-40s %8s\n" "$(basename "$(dirname "$f")")" "$(du -h "$f" | cut -f1)"
-done
-' sh {} +
-```
-
 
 ### Unzip all downloaded SurfaceMapper xssMiner.zip file:
 ```
@@ -61,4 +52,14 @@ for d in */; do
   host=$(head -n1 "$f" | cut -d/ -f3)
   mv -- "$d" "$host"
 done
+```
+
+### Show endpoints.txt human-readable size
+```
+developer@linux ~/Downloads/xssMiner DB New % find . -name endpoints.txt -exec du -h {} \; | sort -h
+420K	./Done payoneer.com.cn/endpoints.txt
+864K	./Done aic.sg/endpoints.txt
+880K	./skuad.io/endpoints.txt
+888K	./visaprepaidprocessing.com/endpoints.txt
+980K	./sodastream.pl/endpoints.txt
 ```
