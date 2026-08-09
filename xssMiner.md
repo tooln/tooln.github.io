@@ -1,12 +1,4 @@
-### Big Domain:
-```
-apple.com
-apnic.net
-sas.com
-nuveen.com
-```
-
-### Configuration:
+## Server List:
 | Miner  | Name  | Status         |
 | ------ | ----- | -------------- |
 | Miner1 | alpha | Configured     |
@@ -70,14 +62,4 @@ find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
         mv "$dir" "$dir/../${size}_${base}"
     done
 ' sh {} +
-```
-
-## Show endpoints.txt human-readable size
-```
-developer@linux ~/Downloads/xssMiner% find . -name endpoints.txt -exec du -h {} \; | sort -h
-420K	./payoneer.com.cn/endpoints.txt
-864K	./aic.sg/endpoints.txt
-880K	./skuad.io/endpoints.txt
-888K	./visaprepaidprocessing.com/endpoints.txt
-980K	./sodastream.pl/endpoints.txt
 ```
