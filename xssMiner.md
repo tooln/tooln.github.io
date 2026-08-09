@@ -32,7 +32,15 @@ rm *.zip
 find . -mindepth 1 -maxdepth 1 -type d \
   -exec sh -c '
     for d; do
-      [ -f "$d/xssMiner.zip" ] && [ ! -d "$d/xssMiner" ] && unzip -o "$d/xssMiner.zip" -d "$d"
+      zip="$d/xssMiner.zip"
+      out="$d/xssMiner"
+      [ -f "$zip" ] || continue
+      [ -d "$out" ] && rm -rf "$out"
+      if unzip -o "$zip" -d "$out" >/dev/null; then
+        rm -f "$zip"
+      else
+        echo "FAILED: $zip"
+      fi
     done
   ' sh {} +
 ```
