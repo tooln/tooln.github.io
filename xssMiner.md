@@ -27,7 +27,9 @@ done
 ```
 ```
 cat *_URxss.txt > xss.txt && rm *_URxss.txt
-cat *_reflected.txt | sort -u > reflected.txt && rm *_reflected.txt
+parallel -j "$(nproc)" 'sort {} -o {}.sorted' ::: *_reflected.txt
+sort -u *.sorted > reflected.txt
+rm -- *.sorted && rm *_reflected.txt
 rm *.zip
 ```
 
