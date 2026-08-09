@@ -25,14 +25,6 @@ for zip in *.zip; do
     unzip -p "$zip" reflected.txt > "${base}_reflected.txt" 2>/dev/null
 done
 ```
-```
-for zip in *.zip; do
-    base="${zip%.zip}"
-    unzip -p "$zip" xss.txt > "${base}_xss.txt" 2>/dev/null
-    unzip -p "$zip" pxss.txt > "${base}_pxss.txt" 2>/dev/null
-done
-```
-
 
 ### Unzip all downloaded SurfaceMapper xssMiner.zip file:
 ```
