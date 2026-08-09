@@ -25,6 +25,11 @@ for zip in *.zip; do
     unzip -p "$zip" reflected.txt > "${base}_reflected.txt" 2>/dev/null
 done
 ```
+```
+cat *_URxss.txt > xss.txt && rm *_URxss.txt
+cat *_reflected.txt | sort -u > reflected.txt && rm *_reflected.txt
+rm *.zip
+```
 
 ### Unzip all downloaded SurfaceMapper xssMiner.zip file:
 ```
