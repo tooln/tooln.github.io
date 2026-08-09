@@ -53,6 +53,23 @@ for d in */; do
 done
 ```
 
+### Rename all folder adding file size before hostname:
+```
+find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
+    for file do
+        dir=$(dirname "$file")
+        size=$(du -h "$file" | cut -f1)
+        base=$(basename "$dir")
+
+        case "$base" in
+            "${size}"_*) continue ;;
+        esac
+
+        mv "$dir" "$dir/../${size}_${base}"
+    done
+' sh {} +
+```
+
 ### Show endpoints.txt human-readable size
 ```
 developer@linux ~/Downloads/xssMiner% find . -name endpoints.txt -exec du -h {} \; | sort -h
