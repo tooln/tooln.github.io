@@ -33,10 +33,9 @@ find . -mindepth 1 -maxdepth 1 -type d \
   -exec sh -c '
     for d; do
       zip="$d/xssMiner.zip"
-      out="$d/xssMiner"
       [ -f "$zip" ] || continue
-      [ -d "$out" ] && rm -rf "$out"
-      if unzip -o "$zip" -d "$out" >/dev/null; then
+      unzip -o "$zip" -d "$d" >/dev/null
+      if [ -f "$d/endpoints.txt" ] || [ -f "$d/param.txt" ] || [ -f "$d/urls.txt" ]; then
         rm -f "$zip"
       else
         echo "FAILED: $zip"
