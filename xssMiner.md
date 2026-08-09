@@ -17,7 +17,7 @@ nuveen.com
 | Miner6 | Zeta  | Configured     |
 
 
-### Unzip xssHunter result:
+## Unzip xssHunter result:
 ```
 for zip in *.zip; do
     base="${zip%.zip}"
@@ -33,7 +33,9 @@ rm -- *.sorted && rm *_reflected.txt
 rm *.zip
 ```
 
-### Unzip all downloaded SurfaceMapper xssMiner.zip file:
+# Everything after surfaceMapper download:
+
+**1. Unzip all downloaded surfaceMapper xssMiner.zip file:**
 ```
 find . -mindepth 1 -maxdepth 1 -type d \
   -exec sh -c '
@@ -43,7 +45,7 @@ find . -mindepth 1 -maxdepth 1 -type d \
   ' sh {} +
 ```
 
-### Rename all folder using hostname:
+**2. Rename all folder using hostname:**
 ```
 for d in */; do
   f="$d/endpoints.txt"
@@ -53,7 +55,7 @@ for d in */; do
 done
 ```
 
-### Rename all folder adding file size before hostname:
+**3: Rename all folder adding file size before hostname:**
 ```
 find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
     for file do
@@ -70,7 +72,7 @@ find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
 ' sh {} +
 ```
 
-### Show endpoints.txt human-readable size
+## Show endpoints.txt human-readable size
 ```
 developer@linux ~/Downloads/xssMiner% find . -name endpoints.txt -exec du -h {} \; | sort -h
 420K	./payoneer.com.cn/endpoints.txt
