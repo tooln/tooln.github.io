@@ -28,3 +28,9 @@ for i in {1..80}; do cp VPS$i/output/VPS$i.txt $i.txt; done
 ```
 for i in {1..80}; do rm -rf VPS$i; done
 ```
+```
+cat -- *.txt | sort -u -S 80% -T /tmp > all
+```
+```
+rm *.txt && mv all urls.txt
+```
