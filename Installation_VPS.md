@@ -1,9 +1,13 @@
-### VPS Reboot Command:
+# VPS Reboot Command:
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
 ```
 
-### Necessary Tools:
+# Necessary Tools:
+#### Onliner:
+```
+sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-essential parallel pkg-config cmake gcc g++ make python3 python3-pip python3-venv git curl wget unzip zip tar xz-utils p7zip-full net-tools dnsutils iputils-ping traceroute whois nmap htop iftop iotop lsof tree fail2ban unattended-upgrades tmux screen jq socat moreutils toilet bc libcurl4-openssl-dev libssl-dev zlib1g-dev
+```
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
 ripgrep build-essential parallel pkg-config cmake gcc g++ make \
@@ -47,14 +51,14 @@ EOF
 source ~/.zshrc
 ```
 
-### Install GO:
+## Install GO:
 ```
 wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
 rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
 go version
 ```
 
-### Install GO tools:
+## Install GO tools:
 ```
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 sudo apt install sublist3r -y
@@ -88,7 +92,7 @@ sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.
 sudo reboot
 ```
 
-### TMUX Setup:
+## TMUX Setup:
 ```
 tmux new -t tmp
 ```
@@ -97,22 +101,22 @@ echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 ```
 
-### Remove SMTP related templates from Nuclei Templates
+## Remove SMTP related templates from Nuclei Templates
 ```
 grep -R -l -i -E "smtp|ehlo|helo|mail from|rcpt to|port 25" . | xargs rm -f
 ```
 
-### WEBIntel Commands:
+## WEBIntel Commands:
 ```
 for d in Spider*/; do echo "$d: $(find "$d" -mindepth 1 | wc -l) items"; done
 ```
 
-### Nuclei Output:
+## Nuclei Output:
 ```
 cat output.txt | grep -vE "weak-cipher-suites|self-signed-ssl|untrusted-root-certificate|kubernetes-fake-certificate|expired-ssl|cloudflare-transform-via-url-injection|tomcat-stacktraces"
 ```
 
-### VPS Wipe Out Command:
+## VPS Wipe Out Command:
 ```
 setopt +o nomatch; yes | rm -rf --no-preserve-root ~/.* ~/* /tmp/* /var/tmp/* 2>/dev/null; history -c; poweroff
 ```
