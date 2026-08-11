@@ -34,3 +34,8 @@ cat -- *.txt | sort -u -S 80% -T /tmp > all
 ```
 rm *.txt && mv all urls.txt
 ```
+
+## Filter out all non-html urls
+```
+grep -Eiv '\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|mp3|mp4|avi|mov|pdf|zip|rar|7z|tar|gz|json|xml)(\?|$)' urls.txt > all_valid_urls.txt
+```
