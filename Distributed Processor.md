@@ -22,3 +22,9 @@ xargs -0 -n1 -P16 bash -c '
     mv all "$(basename "$d").txt"
 ' bash
 ```
+```
+for i in {1..80}; do cp VPS$i/output/VPS$i.txt $i.txt; done
+```
+```
+for i in {1..80}; do rm -rf VPS$i; done
+```
