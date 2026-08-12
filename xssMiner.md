@@ -1,14 +1,3 @@
-## Server List:
-| Miner  | Name  | Status         |
-| ------ | ----- | -------------- |
-| Miner1 | alpha | Configured     |
-| Miner2 | beta  | Configured     |
-| Miner3 | gamma | Configured     |
-| Miner4 | delta | Configured     |
-| Miner5 | Eps   | Configured     |
-| Miner6 | Zeta  | Configured     |
-
-
 ## Unzip xssHunter result:
 ```
 for zip in *.zip; do
