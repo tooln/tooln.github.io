@@ -59,14 +59,28 @@ done
 find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
     for file do
         dir=$(dirname "$file")
-        size=$(du -h "$file" | cut -f1)
+        bytes=$(wc -c < "$file")
         base=$(basename "$dir")
 
         case "$base" in
-            "${size}"_*) continue ;;
+            KB[0-9]*_*|MB[0-9]*_*|GB[0-9]*_*) continue ;;
         esac
 
-        mv "$dir" "$dir/../${size}_${base}"
+        if [ "$bytes" -ge 1073741824 ]; then
+            size=$(awk "BEGIN {printf \"%.1f\", $bytes/1073741824}")
+            unit=GB
+        elif [ "$bytes" -ge 1048576 ]; then
+            size=$(awk "BEGIN {printf \"%.1f\", $bytes/1048576}")
+            unit=MB
+        elif [ "$bytes" -ge 1024 ]; then
+            size=$(awk "BEGIN {printf \"%.1f\", $bytes/1024}")
+            unit=KB
+        else
+            size=$bytes
+            unit=B
+        fi
+
+        mv -- "$dir" "$dir/../${unit}${size}_${base}"
     done
 ' sh {} +
 ```
