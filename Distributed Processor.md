@@ -2,6 +2,12 @@
 ```
 for d in VPS{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
 ```
+```
+for d in DPS{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
+```
+```
+for d in Worker{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
+```
 
 ## After Download run this command to unzip:
 ```
