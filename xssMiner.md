@@ -74,7 +74,7 @@ find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
 ' sh {} +
 ```
 
-**4. Visit all Folder and run ../prepare_paramURLs.txt
+**4. Visit all Folder and run ../prepare_paramURLs.txt**
 ```
 parallel -j32 --line-buffer '
     echo "===== START: {} ====="
