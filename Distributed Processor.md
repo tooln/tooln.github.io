@@ -13,6 +13,8 @@ for d in Worker{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
 ```
 printf '%s\0' *.zip | xargs -0 -n1 -P16 unzip -q
 ```
+
+#### Change the dir name VPS
 ```
 find . -maxdepth 1 -type d -name 'VPS[0-9]*' -print0 |
 xargs -0 -n1 -P16 bash -c '
