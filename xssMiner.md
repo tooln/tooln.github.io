@@ -43,7 +43,7 @@ for d in */; do
 done
 ```
 
-**3: Rename all folder adding file size before hostname:**
+**3. Rename all folder adding file size before hostname:**
 ```
 find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
     for file do
@@ -72,4 +72,14 @@ find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
         mv -- "$dir" "$dir/../${unit}${size}_${base}"
     done
 ' sh {} +
+```
+
+**4. Visit all Folder and run ../prepare_paramURLs.txt
+```
+parallel -j32 --line-buffer '
+    echo "===== START: {} ====="
+    cd "{}" || exit
+    bash ../prepare_paramURLs.sh
+    echo "===== DONE: {} ====="
+' ::: */
 ```
