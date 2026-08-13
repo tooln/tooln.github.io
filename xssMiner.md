@@ -83,3 +83,10 @@ parallel -j32 --line-buffer '
     echo "===== DONE: {} ====="
 ' ::: */
 ```
+
+**5. Merge 2 big files:**
+```
+mkdir /tmp/sorttmp
+LC_ALL=C sort -u --parallel=$(nproc) -S 16G -T /tmp/sorttmp all.txt paramURLs.txt > merged.txt
+rm -rf /tmp/sorttmp
+```
