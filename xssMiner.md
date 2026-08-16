@@ -1,19 +1,3 @@
-## Unzip xssHunter result:
-```
-for zip in *.zip; do
-    base="${zip%.zip}"
-    unzip -p "$zip" reflector_xss.txt > "${base}_URxss.txt" 2>/dev/null
-    unzip -p "$zip" reflected.txt > "${base}_reflected.txt" 2>/dev/null
-done
-```
-```
-cat *_URxss.txt > xss.txt && rm *_URxss.txt
-parallel -j "$(nproc)" 'sort {} -o {}.sorted' ::: *_reflected.txt
-sort -u *.sorted > reflected.txt
-rm -- *.sorted && rm *_reflected.txt
-rm *.zip
-```
-
 # Everything after surfaceMapper download:
 
 **1. Unzip all downloaded surfaceMapper xssMiner.zip file:**
@@ -45,7 +29,7 @@ done
 
 **3. Rename all folder adding file size before hostname:**
 ```
-find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
+find . -mindepth 2 -maxdepth 2 -name paramURLs.txt -exec sh -c '
     for file do
         dir=$(dirname "$file")
         bytes=$(wc -c < "$file")
@@ -77,16 +61,27 @@ find . -mindepth 2 -maxdepth 2 -name endpoints.txt -exec sh -c '
 **4. Visit all Folder and run ../prepare_paramURLs.txt**
 ```
 parallel -j32 --line-buffer '
-    echo "===== START: {} ====="
     cd "{}" || exit
-    bash ../prepare_paramURLs.sh
-    echo "===== DONE: {} ====="
+    bash ../../prepare_paramURLs.sh
 ' ::: */
 ```
 
-**5. Merge 2 big files:**
+**5. Merge big files using RAM/CPU:**
 ```
 mkdir /tmp/sorttmp
 LC_ALL=C sort -u --parallel=$(nproc) -S 16G -T /tmp/sorttmp all.txt paramURLs.txt > merged.txt
 rm -rf /tmp/sorttmp
+```
+```
+rm -rf /tmp/xss-sort
+mkdir -p /tmp/xss-sort
+
+find . -type f -name 'paramURLs.txt' -exec cat {} + |
+  LC_ALL=C sort -u \
+    --parallel=16 \
+    -S 26G \
+    -T /tmp/xss-sort \
+    > merged.txt
+
+rm -rf /tmp/xss-sort
 ```
