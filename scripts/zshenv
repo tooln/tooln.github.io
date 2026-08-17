@@ -1,6 +1,3 @@
-# Cargo
-. "$HOME/.cargo/env"
-
 # Go
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
