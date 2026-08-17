@@ -27,18 +27,31 @@ for d in */; do
 done
 ```
 
-**3. Print possible file size: paramURLs.txt**
+**3. Prediction File size: paramURLs.txt**
 ```
-for d in */; do
-    endpoint_size=$(wc -c < "$d/endpoints.txt")
-    param_count=$(wc -l < "$d/param.txt")
-    size=$((endpoint_size * param_count))
+total=0
 
-    printf "%-35s %15d bytes  " "$d" "$size"
-    awk -v s="$size" 'BEGIN {
-        printf "%10.2f GB  (%10.2f GiB)\n", s/1000000000, s/1073741824
+for d in */; do
+    eb=$(wc -c < "${d}endpoints.txt")
+    ec=$(wc -l < "${d}endpoints.txt")
+    pb=$(wc -c < "${d}param.txt")
+    pc=$(wc -l < "${d}param.txt")
+
+    size=$(awk -v eb="$eb" -v ec="$ec" -v pb="$pb" -v pc="$pc" \
+        'BEGIN { printf "%.0f", ec * pc * (eb/ec + pb/pc + 5) }')
+
+    total=$((total + size))
+
+    awk -v d="$d" -v s="$size" 'BEGIN {
+        printf "%-35s %.2f GB\n", d, s/1e9
     }'
 done
+
+echo "---------------------------------------------"
+
+awk -v s="$total" 'BEGIN {
+    printf "%-35s %.2f GB\n", "TOTAL", s/1e9
+}'
 ```
 
 **4. Visit all Folder and run ../prepare_paramURLs.txt**
