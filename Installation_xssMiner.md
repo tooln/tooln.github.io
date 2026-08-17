@@ -55,7 +55,6 @@ go version
 ### All Tools:
 ```
 snap install amass
-snap install dalfox
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/tomnomnom/assetfinder@latest
 go install github.com/Emoe/kxss@latest
