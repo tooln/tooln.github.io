@@ -27,7 +27,7 @@ for d in */; do
 done
 ```
 
-**3. Print possible file size: paramURLs.txt
+**3. Print possible file size: paramURLs.txt**
 ```
 for d in */; do
     endpoint_size=$(wc -c < "$d/endpoints.txt")
