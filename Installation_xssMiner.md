@@ -13,6 +13,8 @@ sudo sed -i 's/^127\.0\.1\.1.*/127.0.1.1 vps12/' /etc/hosts
 sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.cfg
 sudo reboot
 ```
+
+### Install zsh
 ```
 curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh && rm zsh.sh
 ```
@@ -68,12 +70,6 @@ waymore --version
 apt update
 sudo apt install aria2 -y
 apt install -y curl build-essential pkg-config libssl-dev
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source ~/.cargo/env
-rustc --version
-cargo --version
-cargo install x8
-x8 --version
 ```
 ```
 curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
@@ -83,6 +79,8 @@ curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.gi
 echo 'unalias gau 2>/dev/null; alias gau=command\ gau' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+### Insatll Notify from /vps repo
 ```
 mkdir $HOME/.config/notify/
 nano $HOME/.config/notify/provider-config.yaml
