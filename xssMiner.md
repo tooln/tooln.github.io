@@ -20,10 +20,40 @@ find . -mindepth 1 -maxdepth 1 -type d \
 **2. Rename all folder using hostname:**
 ```
 for d in */; do
-  f="$d/endpoints.txt"
-  [ -f "$f" ] || continue
-  host=$(head -n1 "$f" | cut -d/ -f3)
-  mv -- "$d" "$host"
+    f="${d%/}/endpoints.txt"
+    [ -f "$f" ] || continue
+
+    host=""
+
+    while IFS= read -r line; do
+        candidate=$(printf '%s\n' "$line" | sed -nE 's#^[a-zA-Z][a-zA-Z0-9+.-]*://([^/:]+).*#\1#p')
+
+        [[ "$candidate" =~ ^[A-Za-z0-9.-]+$ ]] || continue
+        [[ "$candidate" == *.* ]] || continue
+
+        host=$(printf '%s\n' "$candidate" | awk -F. '{
+            if (NF <= 3) print
+            else print $(NF-2) "." $(NF-1) "." $NF
+        }')
+
+        break
+    done < "$f"
+
+    [ -n "$host" ] || {
+        echo "SKIP: no valid hostname found in $f"
+        continue
+    }
+
+    newname="$host"
+    n=1
+
+    while [ -e "$newname" ]; do
+        newname="${host}${n}"
+        ((n++))
+    done
+
+    echo "MOVE: ${d%/} -> $newname"
+    mv -- "$d" "$newname"
 done
 ```
 
