@@ -13,6 +13,9 @@ for d in Worker{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
 ```
 printf '%s\0' *.zip | xargs -0 -n1 -P16 unzip -q
 ```
+```
+printf '%s\0' *.zip | xargs -0 -n1 -P24 7z x -y -bd
+```
 
 #### Change the dir name VPS
 ```
