@@ -11,6 +11,9 @@ for d in Worker{1..80}; do [ -d "$d" ] && zip -r DP.zip "$d"; done
 
 ## After Download run this command to unzip:
 ```
+7z a -t7z -mx=7 -m0=lzma2 -mmt=on Folder.7z Folder
+```
+```
 printf '%s\0' *.zip | xargs -0 -n1 -P16 unzip -q
 ```
 ```
