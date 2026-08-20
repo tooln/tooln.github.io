@@ -14,7 +14,7 @@ for d in Worker{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7
 7z a -t7z -mx=7 -m0=lzma2 -mmt=on Folder.7z Folder
 ```
 ```
-printf '%s\0' *.zip | xargs -0 -n1 -P16 unzip -q
+printf '%s\0' *.7z | xargs -0 -n1 -P24 7z x -y -bd
 ```
 ```
 printf '%s\0' *.zip | xargs -0 -n1 -P24 7z x -y -bd
