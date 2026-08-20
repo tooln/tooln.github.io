@@ -1,12 +1,12 @@
 ## Run this command to all vps to zip the processed folder:
 ```
-for d in VPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=7 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in VPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 ```
-for d in DPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=7 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in DPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 ```
-for d in Worker{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=7 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in Worker{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 
 ## After Download run this command to unzip:
