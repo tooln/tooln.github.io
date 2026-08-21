@@ -1,6 +1,6 @@
 ### Zip all surfaceMapper:
 ```
-for d in surfaceMapper{1..10}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on surfaceMapper.7z "$d"; done
+for d in surfaceMapper{1..10}; do [ -d "$d" ] && 7z a -t7z -mx=3 -m0=lzma2 -mmt=on surfaceMapper.7z "$d"; done
 ```
 
 # Everything after surfaceMapper download:
