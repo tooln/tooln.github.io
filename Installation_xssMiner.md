@@ -54,7 +54,7 @@ nano $HOME/.config/notify/provider-config.yaml
 tmux new -t tmp
 ```
 ```
-echo 'set -g mouse on' >> ~/.tmux.conf && tmux source-file ~/.tmux.conf
+grep -qxF 'set -g mouse on' ~/.tmux.conf 2>/dev/null || echo 'set -g mouse on' >> ~/.tmux.conf && tmux source-file ~/.tmux.conf
 ```
 
 ### Installation Confirmation:
