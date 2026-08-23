@@ -19,30 +19,7 @@ sudo reboot
 curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh && rm zsh.sh
 ```
 ```
-nnny 223 1111 n1y
-```
-```
-chsh -s $(which zsh)
-```
-```
-cat <<'EOF' >> ~/.zshrc
-
-# >>> Go environment setup >>>
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-# <<< Go environment setup <<<
-
-# >>> Custom cls command >>>
-cls() {
-    clear
-    ls
-    tmux ls
-}
-# <<< Custom cls command <<<
-EOF
-
-source ~/.zshrc
+curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/p10k.zsh && cp p10k.zsh ~/.p10k.zsh && rm -f p10k.zsh && export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true && source ~/.p10k.zsh && exec zsh -l
 ```
 
 ### Install GO:
