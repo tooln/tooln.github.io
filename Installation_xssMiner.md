@@ -5,7 +5,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt cle
 
 ### Necessary Tools:
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-essential parallel pkg-config cmake gcc g++ make python3 python3-pip python3-venv git curl wget unzip zip 7zip tar xz-utils p7zip-full net-tools dnsutils iputils-ping traceroute whois nmap htop iftop iotop lsof tree fail2ban unattended-upgrades tmux screen jq socat moreutils toilet lolcat bc libcurl4-openssl-dev libssl-dev zlib1g-dev
+sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-essential parallel aria2 pkg-config cmake gcc g++ make python3 python3-pip python3-venv git curl wget unzip zip 7zip tar xz-utils p7zip-full net-tools dnsutils iputils-ping traceroute whois nmap htop iftop iotop lsof tree fail2ban unattended-upgrades tmux screen jq socat moreutils toilet lolcat bc libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 
 ### Install zsh
@@ -31,21 +31,19 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/waybackurls@latest
+```
+
+```
 sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 waymore --version
-apt update
-sudo apt install aria2 -y
-apt install -y curl build-essential pkg-config libssl-dev
 ```
 ```
 curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
 ```
 ```
 curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/.gau.toml
-echo 'unalias gau 2>/dev/null; alias gau=command\ gau' >> ~/.zshrc
-source ~/.zshrc
 ```
 
 ### Insatll Notify from /vps repo
