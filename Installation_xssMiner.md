@@ -13,12 +13,12 @@ sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-esse
 curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh
 ```
 ```
-curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/p10k.zsh && cp p10k.zsh ~/.p10k.zsh && rm -f p10k.zsh && export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true && source ~/.p10k.zsh && exec zsh -l && rm -f zsh.sh
+curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/p10k.zsh && cp p10k.zsh ~/.p10k.zsh && rm -f p10k.zsh && export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true && source ~/.p10k.zsh && exec zsh -l
 ```
 
 ### Install GO:
 ```
-wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && go version && rm -f go.tar.gz
+wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && go version && rm -f go.tar.gz && rm -f zsh.sh
 ```
 
 ### All Tools:
