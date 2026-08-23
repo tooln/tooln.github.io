@@ -34,10 +34,7 @@ go install github.com/tomnomnom/waybackurls@latest
 ```
 
 ```
-sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-waymore --version
+sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore && waymore --version
 ```
 ```
 curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
