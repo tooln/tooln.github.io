@@ -7,12 +7,6 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt cle
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-essential parallel pkg-config cmake gcc g++ make python3 python3-pip python3-venv git curl wget unzip zip 7zip tar xz-utils p7zip-full net-tools dnsutils iputils-ping traceroute whois nmap htop iftop iotop lsof tree fail2ban unattended-upgrades tmux screen jq socat moreutils toilet lolcat bc libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
-```
-sudo hostnamectl set-hostname vps12
-sudo sed -i 's/^127\.0\.1\.1.*/127.0.1.1 vps12/' /etc/hosts
-sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.cfg
-sudo reboot
-```
 
 ### Install zsh
 ```
@@ -24,9 +18,7 @@ curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/r
 
 ### Install GO:
 ```
-wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && \
-rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && \
-go version
+wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && go version
 ```
 
 ### All Tools:
@@ -74,4 +66,12 @@ tmux source-file ~/.tmux.conf
 ### Installation Confirmation:
 ```
 check(){ printf "%-12s" "$1"; eval "$2" >/dev/null 2>&1 && echo "✅ INSTALLED" || echo "❌ MISSING"; }; check go "go version"; check amass "amass -version"; check subfinder "$HOME/go/bin/subfinder -version"; check assetfinder "$HOME/go/bin/assetfinder -h"; check httpx "$HOME/go/bin/httpx -version"; check notify "$HOME/go/bin/notify -version"; check gau "$HOME/go/bin/gau --version"; check waybackurls "$HOME/go/bin/waybackurls -h"; check waymore "waymore --version"; check aria2c "aria2c -v"
+```
+
+### Change Hostname manually:
+```
+sudo hostnamectl set-hostname vps12
+sudo sed -i 's/^127\.0\.1\.1.*/127.0.1.1 vps12/' /etc/hosts
+sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.cfg
+sudo reboot
 ```
