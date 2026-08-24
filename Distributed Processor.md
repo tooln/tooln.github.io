@@ -1,12 +1,12 @@
 ## Run this command to all vps to zip the processed folder:
 ```
-for d in VPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in VPS{1..100}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 ```
-for d in DPS{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in DPS{1..100}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 ```
-for d in Worker{1..80}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in Worker{1..100}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
 ```
 
 ## After Download run this command to unzip:
@@ -20,7 +20,7 @@ printf '%s\0' *.7z | xargs -0 -n1 -P24 7z x -y -bd
 printf '%s\0' *.zip | xargs -0 -n1 -P24 7z x -y -bd
 ```
 
-#### Change the dir name VPS
+#### Change the dir name from VPS{xx}
 ```
 find . -maxdepth 1 -type d -name 'VPS[0-9]*' -print0 |
 xargs -0 -n1 -P16 bash -c '
@@ -37,10 +37,10 @@ xargs -0 -n1 -P16 bash -c '
 ' bash
 ```
 ```
-for i in {1..80}; do cp VPS$i/output/VPS$i.txt $i.txt; done
+for i in {1..100}; do cp VPS$i/output/VPS$i.txt $i.txt; done
 ```
 ```
-for i in {1..80}; do rm -rf VPS$i; done
+for i in {1..100}; do rm -rf VPS$i; done
 ```
 ```
 cat -- *.txt | sort -u -S 80% -T /tmp > all
