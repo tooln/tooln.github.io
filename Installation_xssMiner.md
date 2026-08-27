@@ -21,7 +21,7 @@ curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/r
 wget https://go.dev/dl/go1.24.8.linux-amd64.tar.gz -O go.tar.gz && rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && go version
 ```
 ```
-rm -f go.tar.gz && rm -f zsh.sh
+rm -f go.tar.gz && rm -f zsh.sh && source ~/.zshrc 
 ```
 
 ### All Tools:
