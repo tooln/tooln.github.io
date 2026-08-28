@@ -47,3 +47,9 @@ find . -type f -name 'paramURLs.txt' -exec cat {} + |
     > merged.txt
 rm -rf /tmp/xss-sort
 ```
+
+
+**4. Find Folder and Run:**
+```
+FOLDER=$(find ~ -type d -name "Worker*" -print -quit) && cd "$FOLDER" && ls && tmux new-session -d -s Distributed_Processor_Worker "./run.sh"
+```
