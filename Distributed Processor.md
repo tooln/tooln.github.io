@@ -58,3 +58,17 @@ grep -Eiv '\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|mp3|mp4|av
 ```
 cd "$(find ~ -type d -name "DPS*" -print -quit)" && ls && tmux new-session -d -s Distributed_Processor_DPS "./run.sh"
 ```
+
+## Make nuclei output colorful:
+```
+awk '
+{
+  gsub(/\[generic-env-001:exposed-secrets\]/, "\033[1;35m&\033[0m")
+  gsub(/\[http\]/, "\033[1;36m&\033[0m")
+  gsub(/\[critical\]/, "\033[1;31m&\033[0m")
+  gsub(/https?:\/\/[^ ]+/, "\033[1;34m&\033[0m")
+  gsub(/DB_[A-Z_]+|VITE_[A-Z_]+|API_URL|OKTA_CLIENT_ID|LAUNCHDARKLY_CLIENT_ID/, "\033[1;33m&\033[0m")
+  gsub(/\[paths=[^]]+\]/, "\033[1;32m&\033[0m")
+  print
+}' vpsMesh_nuclei_result_27.txt > nuclei.txt
+```
