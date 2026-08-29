@@ -37,6 +37,11 @@ LC_ALL=C sort -u --parallel=$(nproc) -S 16G -T /tmp/sorttmp file1.txt file2.txt 
 rm -rf /tmp/sorttmp
 ```
 ```
+mkdir -p /tmp/sorttmp && \
+LC_ALL=C sort -u --parallel="$(nproc)" -S 16G -T /tmp/sorttmp *.txt > merged.txt && \
+rm -rf /tmp/sorttmp
+```
+```
 rm -rf /tmp/xss-sort
 mkdir -p /tmp/xss-sort
 find . -type f -name 'paramURLs.txt' -exec cat {} + |
@@ -46,10 +51,4 @@ find . -type f -name 'paramURLs.txt' -exec cat {} + |
     -T /tmp/xss-sort \
     > merged.txt
 rm -rf /tmp/xss-sort
-```
-
-
-**4. Find Folder and Run:**
-```
-FOLDER=$(find ~ -type d -name "Worker*" -print -quit) && cd "$FOLDER" && ls && tmux new-session -d -s Distributed_Processor_Worker "./run.sh"
 ```
