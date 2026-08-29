@@ -59,6 +59,11 @@ grep -Eiv '\.(js|css|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|mp3|mp4|av
 cd "$(find ~ -type d -name "DPS*" -print -quit)" && ls && tmux new-session -d -s Distributed_Processor_DPS "./run.sh"
 ```
 
+## Extract only URLs:
+```
+grep -oE 'https?://[^[:space:]]+' vpsMesh_nuclei_result_27.txt
+```
+
 ## Make nuclei output colorful:
 ```
 awk '
