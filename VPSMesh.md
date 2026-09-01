@@ -30,6 +30,9 @@ cd "$(find ~ -type d -name "DPS*" -print -quit)" && ls && tmux new-session -d -s
 ```
 cd "$(find ~ -type d -name "mirror*" -print -quit)" && ls && tmux new-session -d -s xssMirror "go run reflector.go -f reflected.txt -m g00gl3 -c 200 -o xss.txt"
 ```
+```
+cd "$(find ~ -type d -name worker* -print -quit)" && ls
+```
 
 ### Extract only URLs:
 ```
