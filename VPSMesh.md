@@ -36,7 +36,7 @@ cd "$(find ~ -type d -name worker* -print -quit)" && ls
 
 ### Extract only URLs:
 ```
-grep -oE 'https?://[^[:space:]]+' vpsMesh_nuclei_result_27.txt
+grep -oE 'https?://[^[:space:]]+' nuclei.txt
 ```
 ```
 python3 -m venv venv && source venv/bin/activate && pip install tldextract
