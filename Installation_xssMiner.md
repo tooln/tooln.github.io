@@ -41,8 +41,7 @@ curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.gi
 
 ### Insatll Notify from /vps repo
 ```
-mkdir $HOME/.config/notify/
-nano $HOME/.config/notify/provider-config.yaml
+mkdir -p "$HOME/.config/notify" && curl -L "https://drive.google.com/uc?export=download&id=1P-lmMfHwxunTHJNmO9_zei5Ml4-5ss1" -o "$HOME/.config/notify/provider-config.yaml"
 ```
 
 ### TMUX Setup:
