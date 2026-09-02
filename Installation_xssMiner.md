@@ -35,11 +35,7 @@ go install github.com/tomnomnom/waybackurls@latest
 
 ```
 sudo apt update && sudo apt install -y pipx && pipx ensurepath && pipx install waymore && waymore --version
-```
-```
 curl -fsSL -o zshenv.txt https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zshenv && mv zshenv.txt ~/.zshenv && source ~/.zshenv
-```
-```
 curl -fsSL -o "$HOME/.gau.toml" https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/.gau.toml
 ```
 
