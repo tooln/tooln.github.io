@@ -46,9 +46,6 @@ mkdir -p "$HOME/.config/notify" && curl -L "https://drive.google.com/uc?export=d
 
 ### TMUX Setup:
 ```
-tmux new -t tmp
-```
-```
 grep -qxF 'set -g mouse on' ~/.tmux.conf 2>/dev/null || echo 'set -g mouse on' >> ~/.tmux.conf && tmux source-file ~/.tmux.conf
 ```
 
