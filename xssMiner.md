@@ -52,3 +52,8 @@ find . -type f -name 'paramURLs.txt' -exec cat {} + |
     > merged.txt
 rm -rf /tmp/xss-sort
 ```
+
+**4. Make REFLECTESTTEST123 colorful:**
+```
+awk '/^\[REFLECTED\]/{print "\033[31m"$0"\033[0m";next}{gsub(/" REFLECTTEST123/,"\033[1;33m&\033[0m");print}' xss100.txt
+```
