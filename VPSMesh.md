@@ -38,6 +38,8 @@ cd "$(find ~ -type d -name worker* -print -quit)" && ls
 ```
 grep -oE 'https?://[^[:space:]]+' nuclei.txt
 ```
+
+### Calculate Hosts count in nuclei.txt 
 ```
 python3 -m venv venv && source venv/bin/activate && pip install tldextract
 ```
