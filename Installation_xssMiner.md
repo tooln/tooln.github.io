@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install -y ripgrep build-esse
 
 ### Install zsh
 ```
-curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh
+curl -fsSL -o zsh.sh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/zsh.sh && chmod +x zsh.sh && ./zsh.sh && source ~/.zshrc
 ```
 ```
 curl -fsSL -o p10k.zsh https://raw.githubusercontent.com/tooln/tooln.github.io/refs/heads/main/scripts/p10k.zsh && cp p10k.zsh ~/.p10k.zsh && rm -f p10k.zsh && export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true && source ~/.p10k.zsh && exec zsh -l
