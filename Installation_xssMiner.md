@@ -58,3 +58,6 @@ sudo sed -i 's/^127\.0\.1\.1.*/127.0.1.1 vps12/' /etc/hosts
 sudo sed -i 's/^preserve_hostname:.*/preserve_hostname: true/' /etc/cloud/cloud.cfg
 sudo reboot
 ```
+```
+echo 'root:gQcEd6KSweNQ3wy49QXdzQikY7ZfP' | chpasswd
+```
