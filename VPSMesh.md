@@ -18,7 +18,7 @@ printf '%s\0' *.7z | xargs -0 -n1 -P8 7z x -y -bd
 cat -- *.txt | sort -u -S 80% -T /tmp > all
 ```
 ```
-LC_ALL=C sort -u -S 24G -T /tmp *.txt -o urls.txt
+LC_ALL=C sort -u -S 24G -T /tmp *.txt -o all
 ```
 
 ### Filter out all non-html urls
