@@ -10,12 +10,15 @@ for d in worker{1..100}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.
 
 ### Unzip any folder
 ```
-printf '%s\0' *.7z | xargs -0 -n1 -P24 7z x -y -bd
+printf '%s\0' *.7z | xargs -0 -n1 -P8 7z x -y -bd
 ```
 
 ### Merge multiple big files at once
 ```
 cat -- *.txt | sort -u -S 80% -T /tmp > all
+```
+```
+LC_ALL=C sort -u -S 24G -T /tmp *.txt -o urls.txt
 ```
 
 ### Filter out all non-html urls
