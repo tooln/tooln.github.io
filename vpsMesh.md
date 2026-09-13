@@ -1,3 +1,8 @@
+### VPS Reboot Command:
+```
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
+```
+
 ### Zip/Unzip all folder into each name:
 ```
 for d in */; do 7z a -t7z -mx=9 -m0=lzma2 -mmt=on "${d%/}.7z" "$d"; done
