@@ -1,22 +1,12 @@
-### ZIP all worker folder into each VPS:
+### Zip/Unzip all folder into each name:
 ```
-for d in worker{1..100}; do [ -d "$d" ] && 7z a -t7z -mx=9 -m0=lzma2 -mmt=on DP.7z "$d"; done
+for d in */; do 7z a -t7z -mx=9 -m0=lzma2 -mmt=on "${d%/}.7z" "$d"; done
 ```
-
-### ZIP any folder
-```
-7z a -t7z -mx=7 -m0=lzma2 -mmt=on Folder.7z Folder
-```
-
-### Unzip any folder
 ```
 printf '%s\0' *.7z | xargs -0 -n1 -P8 7z x -y -bd
 ```
 
 ### Merge multiple big files at once
-```
-cat -- *.txt | sort -u -S 80% -T /tmp > all
-```
 ```
 LC_ALL=C sort -u -S 24G -T /tmp *.txt -o all
 ```
