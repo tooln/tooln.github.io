@@ -28,6 +28,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/tomnomnom/assetfinder@latest
 go install github.com/Emoe/kxss@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/waybackurls@latest
