@@ -45,6 +45,11 @@ python3 -m venv venv && source venv/bin/activate && pip install tldextract
 sed -E $'s/\x1B\\[[0-9;]*[[:alpha:]]//g' nuclei.txt | awk '{for(i=1;i<=NF;i++) if($i ~ /^https?:\/\//){print $i; break}}' | sed -E 's#https?://([^/]+).*#\1#' | python3 -c 'import sys,tldextract; from collections import Counter; c=Counter(tldextract.extract(x.strip()).top_domain_under_public_suffix for x in sys.stdin if x.strip()); print("\n".join(f"{n:6} {d}" for d,n in c.most_common()))'
 ```
 
+### Sort same host together:
+```
+sed -E $'s/\x1B\\[[0-9;]*[[:alpha:]]//g' nuclei.txt | python3 -c 'import sys,tldextract; [(lambda r,l: print(f"{r}\t{l}"))(tldextract.extract(next(x for x in l.split() if x.startswith(("http://","https://")))).top_domain_under_public_suffix,l.rstrip()) for l in sys.stdin]' | sort -t $'\t' -k1,1 | cut -f2-
+```
+
 ### Make nuclei output colorful:
 ```
 awk '
