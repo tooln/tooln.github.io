@@ -77,6 +77,13 @@ nuclei -ut
 snap install amass
 ```
 ```
+curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux.zip
+unzip findomain-linux.zip
+chmod +x findomain
+sudo mv findomain /usr/bin/findomain
+findomain --help
+```
+```
 nano $HOME/.gau.toml
 echo 'unalias gau 2>/dev/null; alias gau=command\ gau' >> ~/.zshrc
 source ~/.zshrc
