@@ -82,6 +82,7 @@ unzip findomain-linux.zip
 chmod +x findomain
 sudo mv findomain /usr/bin/findomain
 findomain --help
+rm findomain-linux.zip 
 ```
 ```
 nano $HOME/.gau.toml
