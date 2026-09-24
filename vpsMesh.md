@@ -59,3 +59,8 @@ sed -E $'s/\x1B\\[[0-9;]*[[:alpha:]]//g' nuclei.txt | python3 -c 'import sys,tld
 ```
 awk '{line=$0;match(line,/^\[[^]]+\]/);f=substr(line,RSTART,RLENGTH);sub(/^\[/,"",f);sub(/\]$/,"",f);split(f,p,":");printf "\033[1;35m[%s\033[0m:\033[1;36m%s]\033[0m ",p[1],p[2];line=substr(line,RSTART+RLENGTH+1);match(line,/^\[[^]]+\]/);line=substr(line,RSTART+RLENGTH+1);match(line,/^\[[^]]+\]/);line=substr(line,RSTART+RLENGTH+1);match(line,/^https?:\/\/[^ ]+/);printf "\033[1;33m%s\033[0m ",substr(line,RSTART,RLENGTH);line=substr(line,RSTART+RLENGTH+1);match(line,/^\[[^]]+\]/);printf "\033[32m%s\033[0m ",substr(line,RSTART,RLENGTH);line=substr(line,RSTART+RLENGTH+1);printf "\033[1;95m%s\033[0m\n",line}' nuclei.txt > tmp.txt && mv tmp.txt nuclei.txt
 ```
+
+### Print the diff
+```
+grep -Fvx -f old.txt new.txt
+```
