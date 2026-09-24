@@ -60,12 +60,9 @@ go version
 
 ## Install GO tools:
 ```
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-sudo apt install sublist3r -y
 go install github.com/tomnomnom/assetfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
-go install github.com/tomnomnom/httprobe@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/tomnomnom/waybackurls@latest
 go install -v github.com/tomnomnom/anew@latest
@@ -74,15 +71,6 @@ CGO_ENABLED=1 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 nuclei -up
 nuclei -ut
-snap install amass
-```
-```
-curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux.zip
-unzip findomain-linux.zip
-chmod +x findomain
-sudo mv findomain /usr/bin/findomain
-findomain --help
-rm findomain-linux.zip 
 ```
 ```
 nano $HOME/.gau.toml
