@@ -27,3 +27,8 @@ sudo apt install sublist3r -y
 ```
 snap install amass
 ```
+
+### Assetfinder
+```
+go get -u github.com/tomnomnom/assetfinder
+```
