@@ -27,3 +27,8 @@ grep -oE 'https?://[^[:space:]]+' nuclei.txt
 ```
 sed -E $'s/\x1B\\[[0-9;]*[[:alpha:]]//g' nuclei.txt | awk '{for(i=1;i<=NF;i++) if($i ~ /^https?:\/\//){print $i; break}}' | sed -E 's#https?://([^/]+).*#\1#' | python3 -c 'import sys,tldextract; from collections import Counter; c=Counter(tldextract.extract(x.strip()).top_domain_under_public_suffix for x in sys.stdin if x.strip()); print("\n".join(f"{n:6} {d}" for d,n in c.most_common()))'
 ```
+
+### Resume ./run.sh
+```
+tmux new-session -d -s vpsMesh_V2secretFuzzer "./run.sh"
+```
