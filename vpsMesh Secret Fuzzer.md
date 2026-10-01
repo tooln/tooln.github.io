@@ -15,7 +15,7 @@ awk '{line=$0;match(line,/^\[[^]]+\]/);f=substr(line,RSTART,RLENGTH);sub(/^\[/,"
 
 ### Print the diff
 ```
-grep -Fvx -f old.txt new.txt
+grep -Fvx -f old.txt new.txt > nuclei.txt
 ```
 
 ### Extract only URLs:
