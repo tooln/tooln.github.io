@@ -30,5 +30,16 @@ snap install amass
 
 ### Assetfinder
 ```
-go get -u github.com/tomnomnom/assetfinder
+go install -v github.com/tomnomnom/assetfinder@latest
+```
+
+
+# Onliner
+```
+go install github.com/az7rb/crt.sh/v3@latest
+curl -LO https://github.com/findomain/findomain/releases/latest/download/findomain-linux.zip && unzip findomain-linux.zip && chmod +x findomain && sudo mv findomain /usr/bin/findomain && findomain --help && rm findomain-linux.zip
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo apt install sublist3r -y
+snap install amass
+go install -v github.com/tomnomnom/assetfinder@latest
 ```
