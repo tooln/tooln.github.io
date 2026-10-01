@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
 ```
 ```
-sudo apt update --fix-missing && sudo apt full-upgrade -y && reboot
+sudo apt update --fix-missing && sudo apt full-upgrade -y && sudo reboot
 ```
 ### Zip/Unzip all folder into each name:
 ```
