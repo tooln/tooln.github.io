@@ -3,9 +3,9 @@
 sudo apt update --fix-missing && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-time=3d && sudo reboot
 ```
 
-## secretFuzzer Runner:
+## secretFuzzer Loop Runner:
 ```
-for n in V2secretFuzzer secretFuzzer DBsecretFuzzer NMsecretFuzzer; do s="vpsMesh_$n"; tmux has-session -t "$s" 2>/dev/null || { d=$(find ~ -type d -name "$n*" -print -quit); [ -z "$d" ] || (cd "$d" && tmux new-session -d -s "$s" "./run.sh"); }; done
+for n in V2secretFuzzer secretFuzzer DBsecretFuzzer NMsecretFuzzer; do s="vpsMesh_$n"; if ! tmux has-session -t "$s" 2>/dev/null; then d=$(find ~ -type d -name "$n*" -print -quit); [ -z "$d" ] && continue; (cd "$d" && tmux new-session -d -s "$s" "./run.sh"); fi; while tmux has-session -t "$s" 2>/dev/null; do sleep 5; done; done
 ```
 
 ### Zip/Unzip all folder into each name:
