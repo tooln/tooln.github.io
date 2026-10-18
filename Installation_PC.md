@@ -9,7 +9,7 @@ net-tools dnsutils iputils-ping traceroute whois nmap \
 htop iftop iotop lsof tree \
 fail2ban unattended-upgrades \
 tmux screen jq socat moreutils \
-toilet bc net-tools \
+toilet lolcat bc net-tools \
 libcurl4-openssl-dev libssl-dev zlib1g-dev
 ```
 
