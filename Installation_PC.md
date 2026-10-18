@@ -6,7 +6,7 @@ python3 python3-pip python3-venv \
 git curl wget \
 unzip zip 7zip tar xz-utils p7zip-full \
 net-tools dnsutils iputils-ping traceroute whois nmap \
-htop iftop iotop neofetch lsof tree \
+htop iftop iotop lsof tree \
 fail2ban unattended-upgrades \
 tmux screen jq socat moreutils \
 toilet bc net-tools \
